@@ -124,7 +124,7 @@ module.exports = function () {
         }
     ],
 
-    padrefamilia: [
+    padredefamilia: [
         {
             idpadre: 1,
             nombre: "KATY",
@@ -329,7 +329,7 @@ module.exports = function () {
 	descripcion:"Llevar a niño de 15 años a escuela",
 	vehiculo:{idvehiculo: 1},
 	conductor:{idconductor: 1},
-	padrefamilia:{idpadre: 1}
+	padredefamilia:{idpadre: 1}
 	},	
 	{	
 	idsolicitud:2,
@@ -339,7 +339,7 @@ module.exports = function () {
 	descripcion:"Llevar a niño de 8 años a escuela",
 	vehiculo:{idvehiculo: 2},
 	conductor:{idconductor: 2},
-	padrefamilia:{idpadre: 2}
+	padredefamilia:{idpadre: 2}
 	},
 	{	
 	idsolicitud:3,
@@ -349,7 +349,7 @@ module.exports = function () {
 	descripcion:"Llevar a dos niños a la  escuela",
 	vehiculo:{idvehiculo: 3},
 	conductor:{idconductor: 3},
-	padrefamilia:{idpadre: 3}
+	padredefamilia:{idpadre: 3}
 	},
 	{	
 	idsolicitud:4,
@@ -359,7 +359,7 @@ module.exports = function () {
 	descripcion:"Llevar a un niño a la  escuela Boston",
 	vehiculo:{idvehiculo: 4},
 	conductor:{idconductor: 4},
-	padrefamilia:{idpadre: 4}
+	padredefamilia:{idpadre: 4}
 	},
 	{	
 	idsolicitud:5,
@@ -369,7 +369,7 @@ module.exports = function () {
 	descripcion:"Llevar a dos niños a la  escuela Boston",
 	vehiculo:{idvehiculo: 5},
 	conductor:{idconductor: 5},
-	padrefamilia:{idpadre: 5}
+	padredefamilia:{idpadre: 5}
 	},
 	{	
 	idsolicitud:6,
@@ -379,7 +379,7 @@ module.exports = function () {
 	descripcion:"Llevar a dos niños a la  escuela Boston",
 	vehiculo:{idvehiculo: 6},
 	conductor:{idconductor: 6},
-	padrefamilia:{idpadre: 6}
+	padredefamilia:{idpadre: 6}
 	},
 	{	
 	idsolicitud:7,
@@ -389,7 +389,7 @@ module.exports = function () {
 	descripcion:"Llevar a dos niños a la  escuela inicial",
 	vehiculo:{idvehiculo: 7},
 	conductor:{idconductor: 7},
-	padrefamilia:{idpadre: 7}
+	padredefamilia:{idpadre: 7}
 	},
 	{	
 	idsolicitud:8,
@@ -399,7 +399,7 @@ module.exports = function () {
 	descripcion:"Llevar a dos niños a la  escuela inicial",
 	vehiculo:{idvehiculo: 8},
 	conductor:{idconductor: 8},
-	padrefamilia:{idpadre: 8}
+	padredefamilia:{idpadre: 8}
 	},
 	{	
 	idsolicitud:9,
@@ -409,7 +409,7 @@ module.exports = function () {
 	descripcion:"Llevar a dos niños a la  escuela inicial",
 	vehiculo:{idvehiculo: 9},
 	conductor:{idconductor: 9},
-	padrefamilia:{idpadre: 9}
+	padredefamilia:{idpadre: 9}
 	},
 	{	
 	idsolicitud:10,
@@ -419,7 +419,7 @@ module.exports = function () {
 	descripcion:"Llevar a dos niños a la  escuela inicial",
 	vehiculo:{idvehiculo: 10},
 	conductor:{idconductor: 10},
-	padrefamilia:{idpadre: 10}
+	padredefamilia:{idpadre: 10}
 	},
     ],
     viajes: [
