@@ -7,7 +7,7 @@ import { environment } from 'src/environments/environment';
   providedIn: 'root'
 })
 export class PadredefamiliaService {
-  private url:string= "http://localhost:5003/padrefamilia"
+  private url:string= "http://localhost:5003/padredefamilia"
   constructor(private http:HttpClient) { }
   listar(){
     return this.http.get<Padredefamilia[]>(this.url);
