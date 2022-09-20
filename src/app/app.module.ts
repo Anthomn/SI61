@@ -12,7 +12,9 @@ import { PadredefamiliaComponent } from './page/padredefamilia/padredefamilia.co
 import { PadredefamiliaListarComponent } from './page/padredefamilia/padredefamilia-listar/padredefamilia-listar.component';
 import { EstadoComponent } from './page/estado/estado.component';
 import { EstadoListarComponent } from './page/estado/estado-listar/estado-listar.component';
-import { PadredefamiliaCreaeditaComponent } from './page/padredefamilia/padredefamilia-creaedita/padredefamilia-creaedita.component'
+import { PadredefamiliaCreaeditaComponent } from './page/padredefamilia/padredefamilia-creaedita/padredefamilia-creaedita.component';
+import { HistorialdeviajesComponent } from './page/historialdeviajes/historialdeviajes.component';
+import { HistorialdeviajesListarComponent } from './page/historialdeviajes/historialdeviajes-listar/historialdeviajes-listar.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import { PadredefamiliaCreaeditaComponent } from './page/padredefamilia/padredef
     PadredefamiliaListarComponent,
     EstadoComponent,
     EstadoListarComponent,
-    PadredefamiliaCreaeditaComponent
+    PadredefamiliaCreaeditaComponent,
+    HistorialdeviajesComponent,
+    HistorialdeviajesListarComponent,
   ],
   imports: [
     BrowserModule,
