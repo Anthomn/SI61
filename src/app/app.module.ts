@@ -17,6 +17,8 @@ import { HistorialdeviajesComponent } from './page/historialdeviajes/historialde
 import { HistorialdeviajesListarComponent } from './page/historialdeviajes/historialdeviajes-listar/historialdeviajes-listar.component';
 import { UbicacionComponent } from './page/ubicacion/ubicacion.component';
 import { UbicacionListarComponent } from './page/ubicacion/ubicacion-listar/ubicacion-listar.component';
+import { SolicitudComponent } from './page/solicitud/solicitud.component';
+import { SolicitudListarComponent } from './page/solicitud/solicitud-listar/solicitud-listar.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +34,8 @@ import { UbicacionListarComponent } from './page/ubicacion/ubicacion-listar/ubic
     HistorialdeviajesListarComponent,
     UbicacionComponent,
     UbicacionListarComponent,
+    SolicitudComponent,
+    SolicitudListarComponent,
   ],
   imports: [
     BrowserModule,
