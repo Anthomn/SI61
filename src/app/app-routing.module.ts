@@ -4,6 +4,7 @@ import { ConductorComponent } from './page/conductor/conductor.component';
 import { PadredefamiliaComponent } from './page/padredefamilia/padredefamilia.component';
 import { EstadoComponent } from './page/estado/estado.component';
 import { HistorialdeviajesComponent } from './page/historialdeviajes/historialdeviajes.component';
+import { UbicacionComponent } from './page/ubicacion/ubicacion.component';
 
 
 const routes: Routes = [{
@@ -23,6 +24,12 @@ const routes: Routes = [{
 },
 {
   path: 'historialdeviajes', component:HistorialdeviajesComponent, children: [
+
+  ]
+},
+
+{
+  path: 'ubicacion', component:UbicacionComponent, children: [
 
   ]
 },

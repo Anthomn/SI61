@@ -15,6 +15,8 @@ import { EstadoListarComponent } from './page/estado/estado-listar/estado-listar
 import { PadredefamiliaCreaeditaComponent } from './page/padredefamilia/padredefamilia-creaedita/padredefamilia-creaedita.component';
 import { HistorialdeviajesComponent } from './page/historialdeviajes/historialdeviajes.component';
 import { HistorialdeviajesListarComponent } from './page/historialdeviajes/historialdeviajes-listar/historialdeviajes-listar.component';
+import { UbicacionComponent } from './page/ubicacion/ubicacion.component';
+import { UbicacionListarComponent } from './page/ubicacion/ubicacion-listar/ubicacion-listar.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +30,8 @@ import { HistorialdeviajesListarComponent } from './page/historialdeviajes/histo
     PadredefamiliaCreaeditaComponent,
     HistorialdeviajesComponent,
     HistorialdeviajesListarComponent,
+    UbicacionComponent,
+    UbicacionListarComponent,
   ],
   imports: [
     BrowserModule,
