@@ -1,0 +1,39 @@
+<p>estado-listar works!</p>
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+  <!--- Note that these columns can be defined in any order.
+        The actual rendered columns are set as a property on the row definition" -->
+
+  <!-- Position Column -->
+  <ng-container matColumnDef="idestado">
+    <th mat-header-cell *matHeaderCellDef> idestado. </th>
+    <td mat-cell *matCellDef="let element"> {{element?.idestado}} </td>
+  </ng-container>
+
+  <!-- Name Column -->
+  <ng-container matColumnDef="caracteristicas">
+    <th mat-header-cell *matHeaderCellDef> caracteristicas </th>
+    <td mat-cell *matCellDef="let element"> {{element?.caracteristicas}} </td>
+  </ng-container>
+
+  <!-- Weight Column -->
+  <ng-container matColumnDef="tiemporestante">
+    <th mat-header-cell *matHeaderCellDef> tiemporestante </th>
+    <td mat-cell *matCellDef="let element"> {{element?.tiemporestante}} </td>
+  </ng-container>
+
+  <!-- Symbol Column -->
+  <ng-container matColumnDef="comentarios">
+    <th mat-header-cell *matHeaderCellDef> comentarios </th>
+    <td mat-cell *matCellDef="let element"> {{element?.comentarios}} </td>
+  </ng-container>
+
+  <!-- Symbol Column -->
+  <ng-container matColumnDef="viajes">
+    <th mat-header-cell *matHeaderCellDef> viajes </th>
+    <td mat-cell *matCellDef="let element"> {{element?.viajes.idviaje}} </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
