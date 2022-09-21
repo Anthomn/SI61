@@ -22,4 +22,10 @@ export class PadredefamiliaService {
   getLista() {
     return this.listaCambio.asObservable();
   }
+  modificar(padredefamilia: Padredefamilia) {
+    return this.http.put(this.url + "/" + padredefamilia.id, padredefamilia);
+  }
+  listarId(id: number) {
+    return this.http.get<Padredefamilia>(`${this.url}/${id}`);
+  }
 }

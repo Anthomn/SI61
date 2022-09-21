@@ -9,11 +9,10 @@ import { VehiculoService } from 'src/app/service/vehiculo.service';
   styleUrls: ['./vehiculo-listar.component.css']
 })
 export class VehiculoListarComponent implements OnInit {
-
-  lista:Vehiculo[] =[];
+  lista:Vehiculo[] = [];
   dataSource:MatTableDataSource<Vehiculo>=new MatTableDataSource();
-  displayedColumns:string[]=['idvehiculo', 'aniomodelo', 'placa','color', 'estado', 'marca', 'caracteristica', 'conductor' ]
-  
+  displayedColumns:string[]=['idvehiculo', 'aniomodelo', 'placa', 'color', 'estado', 'marca', 'caracteristica', 'conductor']
+
   constructor(private VehiculoService: VehiculoService) { }
 
   ngOnInit(): void {
@@ -24,3 +23,4 @@ export class VehiculoListarComponent implements OnInit {
   }
 
 }
+

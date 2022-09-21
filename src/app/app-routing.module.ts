@@ -18,7 +18,9 @@ const routes: Routes = [{
   ]
 }, {
   path: 'padredefamilia', component: PadredefamiliaComponent, children: [
-    { path: 'nuevo', component:  PadredefamiliaCreaeditaComponent}
+    { path: 'nuevo', component:  PadredefamiliaCreaeditaComponent},
+    { path: 'edicion/:id', component: PadredefamiliaCreaeditaComponent }
+
   ]
 },
 {

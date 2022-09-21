@@ -5,7 +5,7 @@
   
     <mat-form-field class="example-full-width">
       <mat-label>idpadre</mat-label>
-      <input matInput placeholder="idpadre" [(ngModel)]="padredefamilia.idpadre">
+      <input matInput placeholder="idpadre" [(ngModel)]="padredefamilia.id">
     </mat-form-field>
   
     <br>
@@ -41,7 +41,12 @@
         <input matInput required placeholder="telefono" [(ngModel)]="padredefamilia.telefono">
     
     </mat-form-field>
+    <br>
+    <mat-form-field class="example-full-width">
+        <mat-label>direccion</mat-label>
+        <input matInput required placeholder="direccion" [(ngModel)]="padredefamilia.direccion">
     
+    </mat-form-field>
     
     <br>
     <button mat-raised-button color="primary" (click)="aceptar()">Aceptar</button>

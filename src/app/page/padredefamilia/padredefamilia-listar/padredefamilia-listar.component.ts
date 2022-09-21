@@ -10,7 +10,7 @@ import { PadredefamiliaService } from 'src/app/service/padredefamilia.service';
 })
 export class PadredefamiliaListarComponent implements OnInit {
   dataSource:MatTableDataSource<Padredefamilia> = new MatTableDataSource();
-  displayedColumns:string[]=['idpadre', 'nombre', 'apellido','edad','email','telefono','direccion']
+  displayedColumns:string[]=['idpadre', 'nombre', 'apellido','edad','email','telefono','direccion','acciones'];
   constructor(private padreService: PadredefamiliaService) { }
 
   ngOnInit(): void {

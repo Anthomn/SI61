@@ -126,93 +126,93 @@ module.exports = function () {
 
     padredefamilia: [
         {
-            idpadre: 1,
+            id: 1,
             nombre: "KATY",
             apellido: "VARGAS",
             edad: 40,
             email: "email@hotmail.co",
-            telefono: "989373747",
+            telefono: 989373747,
             direccion: "Av. Salaverry3737"
         },
         {
-            idpadre: 2,
+            id: 2,
             nombre: "OSCAR",
             apellido: "NAVARRO",
             edad: 38,
             email: "EMAL@GMAIL.COM",
-            telefono: "98374737",
+            telefono: 98374737,
             direccion: "Av. Brasil 4738"
         },
         {
-            idpadre: 3,
+            id: 3,
             nombre: "JOSE",
             apellido: "MONTRO",
             edad: 29,
             email: "EMAIL@GMAIL.COM",
-            telefono: "839849993",
+            telefono: 839849993,
             direccion: "AV. AYACUCHO 345"
         },
         {
-            idpadre: 4,
+            id: 4,
             nombre: "MARIA",
             apellido: "RODRIGUEZ",
             edad: 45,
             email: "EMAIL@HOTMAIL.COM",
-            telefono: "98383737",
+            telefono: 98383737,
             direccion: "AV. LENCIO PRADO 338"
         },
         {
-            idpadre: 5,
+            id: 5,
             nombre: "EDGAR",
             apellido: "PEREZ",
             edad: 34,
             email: "EMAIL@YAHOO.COM",
-            telefono: "964747477",
+            telefono: 964747477,
             direccion: "AV. TACNA 366"
         },
         {
-            idpadre: 6,
+            id: 6,
             nombre: "JUAN",
             apellido: "ORTIZ",
             edad: 35,
             email: "EMAIL@HOTMAIL.COM",
-            telefono: "974646666",
+            telefono: 974646666,
             direccion: "AV. BOLOGNESI 3837"
         },
         {
-            idpadre: 7,
+            id: 7,
             nombre: "LIDIA",
             apellido: "VASQUEZ",
             edad: 37,
             email: "EMAIL@HOTMAIL.COM",
-            telefono: "973847827",
+            telefono: 973847827,
             direccion: "AV. LOS CLAVELES 464"
         },
         {
-            idpadre: 8,
+            id: 8,
             nombre: "TEODORO",
             apellido: "BERROCAL",
             edad: 45,
             email: "EMAIL@GMAIL.COM",
-            telefono: "988376377",
+            telefono: 988376377,
             direccion: "AV. LA MARINA 345"
         },
         {
-            idpadre: 9,
+            id: 9,
             nombre: "WALTER",
             apellido: "FERNANDEZ",
             edad: 37,
             email: "EMAIL@GMAIL.COM",
-            telefono: "983938939",
+            telefono: 98393893,
             direccion: "AV.LOS PROCESRES 4646"
         },
         {
-            idpadre: 10,
+            id: 10,
             nombre: "ALEJANDRO",
             apellido: "GARCIA",
             edad: 50,
             email: "EMAIL@HOTMAI.COM",
-            telefono: "987867655",
+            telefono: 987867655,
             direccion: "AV. SUCRE 4647"
         }
     ],
