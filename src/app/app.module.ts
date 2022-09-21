@@ -23,6 +23,12 @@ import { ViajesComponent } from './page/viajes/viajes.component';
 import { ViajesListarComponent } from './page/viajes/viajes-listar/viajes-listar.component';
 import { VehiculoComponent } from './page/vehiculo/vehiculo.component';
 import { VehiculoListarComponent } from './page/vehiculo/vehiculo-listar/vehiculo-listar.component';
+import { ConductorCreaeditaComponent } from './page/conductor/conductor-creaedita/conductor-creaedita.component';
+import { MatInputModule } from '@angular/material/input';
+import { MatButtonModule } from '@angular/material/button';
+import {MatIconModule} from'@angular/material/icon';
+import { FormsModule } from '@angular/forms';
+import { UbicacionCreaeditaComponent } from './page/ubicacion/ubicacion-creaedita/ubicacion-creaedita.component';
 
 @NgModule({
   declarations: [
@@ -44,13 +50,20 @@ import { VehiculoListarComponent } from './page/vehiculo/vehiculo-listar/vehicul
     ViajesListarComponent,
     VehiculoComponent,
     VehiculoListarComponent,
+    ConductorCreaeditaComponent,
+    UbicacionCreaeditaComponent
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    MatTableModule
+    MatTableModule,
+    MatInputModule,
+    FormsModule,
+    MatButtonModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]

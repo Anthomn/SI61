@@ -8,16 +8,17 @@ import { UbicacionComponent } from './page/ubicacion/ubicacion.component';
 import { SolicitudComponent } from './page/solicitud/solicitud.component';
 import { ViajesComponent } from './page/viajes/viajes.component';
 import { VehiculoComponent } from './page/vehiculo/vehiculo.component';
-
-
+import { ConductorCreaeditaComponent } from './page/conductor/conductor-creaedita/conductor-creaedita.component';
+import { UbicacionCreaeditaComponent } from './page/ubicacion/ubicacion-creaedita/ubicacion-creaedita.component';
+import { PadredefamiliaCreaeditaComponent } from './page/padredefamilia/padredefamilia-creaedita/padredefamilia-creaedita.component';
 const routes: Routes = [{
   path: 'conductor', component:ConductorComponent, children: [
-    
+    { path: 'nuevo', component:  ConductorCreaeditaComponent}
 
   ]
 }, {
   path: 'padredefamilia', component: PadredefamiliaComponent, children: [
-
+    { path: 'nuevo', component:  PadredefamiliaCreaeditaComponent}
   ]
 },
 {
@@ -33,7 +34,7 @@ const routes: Routes = [{
 
 {
   path: 'ubicacion', component:UbicacionComponent, children: [
-
+    { path: 'nuevo', component: UbicacionCreaeditaComponent}
   ]
 },
 
