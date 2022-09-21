@@ -9,7 +9,6 @@ import { PadredefamiliaService } from 'src/app/service/padredefamilia.service';
   styleUrls: ['./padredefamilia-listar.component.css']
 })
 export class PadredefamiliaListarComponent implements OnInit {
-  lista:Padredefamilia[] =[];
   dataSource:MatTableDataSource<Padredefamilia> = new MatTableDataSource();
   displayedColumns:string[]=['idpadre', 'nombre', 'apellido','edad','email','telefono','direccion']
   constructor(private padreService: PadredefamiliaService) { }
@@ -19,6 +18,9 @@ export class PadredefamiliaListarComponent implements OnInit {
       //this.lista =data ;
       this.dataSource=new MatTableDataSource(data);
     })
+    this.padreService.getLista().subscribe(data => {
+      this.dataSource = new MatTableDataSource(data);
+    });
   }
 
 }

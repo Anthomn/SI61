@@ -1,4 +1,7 @@
-<p>padredefamilia-listar works!</p>
+<div class="container">
+  <div style=" text-align: center;">
+    <h1>Lista de padres de familia</h1>
+  </div>
 <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
 
     <!--- Note that these columns can be defined in any order.
@@ -48,5 +51,12 @@
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
     <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
   </table>
-  
+  <div class="example-button-container">
+
+    <button mat-mini-fab color="primary" aria-label="Example icon button with a plus one icon"
+      routerLink="/padredefamilia/nuevo">
+      <mat-icon>plus_one</mat-icon>
+    </button>
+  </div>
+
   
