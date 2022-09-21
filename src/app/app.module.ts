@@ -21,6 +21,8 @@ import { SolicitudComponent } from './page/solicitud/solicitud.component';
 import { SolicitudListarComponent } from './page/solicitud/solicitud-listar/solicitud-listar.component';
 import { ViajesComponent } from './page/viajes/viajes.component';
 import { ViajesListarComponent } from './page/viajes/viajes-listar/viajes-listar.component';
+import { VehiculoComponent } from './page/vehiculo/vehiculo.component';
+import { VehiculoListarComponent } from './page/vehiculo/vehiculo-listar/vehiculo-listar.component';
 
 @NgModule({
   declarations: [
@@ -40,6 +42,8 @@ import { ViajesListarComponent } from './page/viajes/viajes-listar/viajes-listar
     SolicitudListarComponent,
     ViajesComponent,
     ViajesListarComponent,
+    VehiculoComponent,
+    VehiculoListarComponent,
   ],
   imports: [
     BrowserModule,
