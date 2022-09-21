@@ -19,6 +19,8 @@ import { UbicacionComponent } from './page/ubicacion/ubicacion.component';
 import { UbicacionListarComponent } from './page/ubicacion/ubicacion-listar/ubicacion-listar.component';
 import { SolicitudComponent } from './page/solicitud/solicitud.component';
 import { SolicitudListarComponent } from './page/solicitud/solicitud-listar/solicitud-listar.component';
+import { ViajesComponent } from './page/viajes/viajes.component';
+import { ViajesListarComponent } from './page/viajes/viajes-listar/viajes-listar.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +38,8 @@ import { SolicitudListarComponent } from './page/solicitud/solicitud-listar/soli
     UbicacionListarComponent,
     SolicitudComponent,
     SolicitudListarComponent,
+    ViajesComponent,
+    ViajesListarComponent,
   ],
   imports: [
     BrowserModule,

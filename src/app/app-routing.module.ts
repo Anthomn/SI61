@@ -6,7 +6,7 @@ import { EstadoComponent } from './page/estado/estado.component';
 import { HistorialdeviajesComponent } from './page/historialdeviajes/historialdeviajes.component';
 import { UbicacionComponent } from './page/ubicacion/ubicacion.component';
 import { SolicitudComponent } from './page/solicitud/solicitud.component';
-
+import { ViajesComponent } from './page/viajes/viajes.component';
 
 
 const routes: Routes = [{
@@ -42,6 +42,11 @@ const routes: Routes = [{
   ]
 },
 
+{
+  path: 'viajes', component:ViajesComponent, children: [
+
+  ]
+},
 
 ];
 
