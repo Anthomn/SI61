@@ -9,17 +9,18 @@ import { UbicacionService } from 'src/app/service/ubicacion.service';
   styleUrls: ['./ubicacion-listar.component.css']
 })
 export class UbicacionListarComponent implements OnInit {
-  lista:Ubicacion[] = [];
-  dataSource:MatTableDataSource<Ubicacion>=new MatTableDataSource();
-  displayedColumns:string[]=['idubicacion', 'hora', 'distrito']
-
-  constructor(private UbicacionService: UbicacionService) { }
+  dataSource: MatTableDataSource<Ubicacion> = new MatTableDataSource();
+  displayedColumns: string[]=['idubicacion', 'hora', 'distrito'];
+  constructor(private us: UbicacionService) { }
 
   ngOnInit(): void {
-    this.UbicacionService.listar().subscribe(data=> {
+    this.us.listar().subscribe(data=> {
       this.dataSource=new MatTableDataSource(data);
 
     })
+    this.us.getLista().subscribe(data => {
+      this.dataSource = new MatTableDataSource(data);
+    });
   }
 
 }

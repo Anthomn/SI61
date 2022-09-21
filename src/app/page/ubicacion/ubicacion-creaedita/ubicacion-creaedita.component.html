@@ -1,0 +1,32 @@
+<p>ubicacion-creaedita works!</p>
+<div class="container">
+
+    <h1>Ubicacion</h1>
+  
+    <mat-form-field class="example-full-width">
+      <mat-label>idubicacion</mat-label>
+      <input matInput placeholder="idubicacion" [(ngModel)]="ubicacion.idubicacion">
+    </mat-form-field>
+  
+    <br>
+  
+    <mat-form-field class="example-full-width">
+      <mat-label>hora</mat-label>
+      <input matInput required placeholder="hora" [(ngModel)]="ubicacion.hora">
+  
+    </mat-form-field>
+
+    <br>
+
+    <mat-form-field class="example-full-width">
+        <mat-label>distrito</mat-label>
+        <input type="distrito" matInput required placeholder="distrito" [(ngModel)]="ubicacion.distrito">
+    
+      </mat-form-field>
+  
+      <br>
+    <button mat-raised-button color="primary" (click)="aceptar()">Aceptar</button>
+    <button mat-raised-button color="warn" routerLink="/ubicacion">Cancelar</button>
+    <p>{{mensaje}}</p>
+  
+  </div>
