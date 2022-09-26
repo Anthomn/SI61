@@ -1,0 +1,57 @@
+<p>conductor-creaedita works!</p>
+<div class="container">
+
+  <h1>CONDUCTOR</h1>
+
+  <mat-form-field class="example-full-width">
+    <mat-label>Id</mat-label>
+    <input matInput placeholder="idconductor" [(ngModel)]="conductor.id">
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+    <mat-label>Nombre</mat-label>
+    <input matInput required placeholder="nombre" [(ngModel)]="conductor.nombre">
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+    <mat-label>Apellido</mat-label>
+    <input matInput required placeholder="apellido" [(ngModel)]="conductor.apellido">
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+    <mat-label>DNI</mat-label>
+    <input matInput required placeholder="dni" [(ngModel)]="conductor.dni">
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+    <mat-label>Genero</mat-label>
+    <input matInput required placeholder="genero" [(ngModel)]="conductor.genero">
+  </mat-form-field>
+ 
+  <mat-form-field class="example-full-width">
+    <mat-label>Edad</mat-label>
+    <input matInput placeholder="edad" [(ngModel)]="conductor.edad">
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+    <mat-label>Tiempo Conducción</mat-label>
+    <input matInput placeholder="tiempo" [(ngModel)]="conductor.tiempoconduccion">
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+    <mat-label>Dirección</mat-label>
+    <input matInput placeholder="Dirección" [(ngModel)]="conductor.direccion">
+  </mat-form-field>
+
+
+
+  <mat-form-field class="example-full-width">
+    <mat-label>Verificado</mat-label>
+    <input matInput placeholder="Dirección" [(ngModel)]="conductor.verificado">
+  </mat-form-field>
+
+  <br>
+  
+  <button mat-raised-button color="primary" (click)="aceptar()">Aceptar</button>
+  <button mat-raised-button color="warn" routerLink="/conductor">Cancelar</button>
+  <p>{{mensaje}}</p>

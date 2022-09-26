@@ -3,7 +3,7 @@ module.exports = function () {
 {
     conductor: [
         {
-            idconductor: 1,
+            id: 1,
             nombre: "Jose",
             apellido: "Ramirez",
             dni: "60205900",
@@ -11,11 +11,10 @@ module.exports = function () {
             edad: 40,
             tiempoconduccion: 20,
             direccion: "Av. Brasil 1345 Jesus Maria",
-	        verificado: "Si",
-            historialdeviajes: {idhistorial: 1}
+	        verificado: "Si"
         },
         {
-            idconductor:2,
+            id:2,
             nombre: "Pedro",
             apellido: "Saavedra",
             dni: "45673657",
@@ -23,11 +22,10 @@ module.exports = function () {
             edad: 35,
             tiempoconduccion: 10,
             direccion: "Av. Ayacucho 443 Magdalena",
-	        verificado: "Si",
-	        historialdeviajes: {idhistorial: 2}
+	        verificado: "Si"
         },
         {
-            idconductor:3,
+            id:3,
             nombre: "Juan",
             apellido: "Manrique",
             dni: "41284848",
@@ -35,11 +33,10 @@ module.exports = function () {
             edad: 25,
             tiempoconduccion: 5,
             direccion: "Av. Javier Prado Oeste 234 San Isidro",
-	        verificado: "Si",
-	        historialdeviajes: {idhistorial: 3}
+	        verificado: "Si"
         },
         {
-            idconductor:4,
+            id:4,
             nombre: "Anthony",
             apellido: "Huamán",
             dni: "10484838",
@@ -47,11 +44,11 @@ module.exports = function () {
             edad: 50,
             tiempoconduccion: 30,
             direccion: "Av. Salaverry 3455 Jesus Maria",
-	        verificado: "Si",
-	        historialdeviajes: {idhistorial: 4}
+	        verificado: "Si"
+
         },
         {
-            idconductor:5,
+            id:5,
             nombre: "Alejandro",
             apellido: "Perez",
             dni: "23848488",
@@ -59,11 +56,10 @@ module.exports = function () {
             edad: 35,
             tiempoconduccion: 10,
             direccion: "Jr. Cuzco 374",
-	        verificado: "Si",
-	        historialdeviajes: {idhistorial: 5}
+	        verificado: "Si"
         },
         {
-            idconductor:6,
+            id:6,
             nombre: "Armando",
             apellido: "Vilca",
             dni: "38488588",
@@ -71,11 +67,10 @@ module.exports = function () {
             edad: 43,
             tiempoconduccion: 17,
             direccion: "AV. 28 de Julio 456 San Isidro",
-	        verificado: "Si",
-	        historialdeviajes: {idhistorial: 6}
+	        verificado: "Si"
         },
         {
-            idconductor:7,
+            id:7,
             nombre: "Maria",
             apellido: "Montero",
             dni: "57375777",
@@ -83,11 +78,10 @@ module.exports = function () {
             edad: 28,
             tiempoconduccion: 8,
             direccion: "Av. Lampa 353",
-	        verificado: "Si",
-	        historialdeviajes: {idhistorial: 7}
+	        verificado: "Si"
         },
         {
-            idconductor:8,
+            id:8,
             nombre: "Oscar",
             apellido: "Zevallos",
             dni: "36546466",
@@ -95,11 +89,10 @@ module.exports = function () {
             edad: 35,
             tiempoconduccion: 15,
             direccion: "Av. Camelias 365",
-	        verificado: "Si",
-	        historialdeviajes: {idhistorial: 8}
+	        verificado: "Si"
         },
         {
-            idconductor:9,
+            id:9,
             nombre: "Alberto",
             apellido: " Medina",
             dni: "40509399",
@@ -107,11 +100,10 @@ module.exports = function () {
             edad: 30,
             tiempoconduccion: 10,
             direccion: "Av. El Ejercito 374",
-	        verificado: "Si",
-	        historialdeviajes: {idhistorial: 9}
+	        verificado: "Si"
         },
         {
-            idconductor:10,
+            id:10,
             nombre: "Guillermo",
             apellido: "Salazar ",
             dni: "38384848",
@@ -119,8 +111,7 @@ module.exports = function () {
             edad: 50,
             tiempoconduccion: 30,
             direccion: "Av. Angamos 3847",
-	        verificado: "Si",
-	        historialdeviajes: {idhistorial: 10}
+	        verificado: "Si"
         }
     ],
 

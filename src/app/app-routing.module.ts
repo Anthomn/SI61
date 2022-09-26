@@ -13,10 +13,11 @@ import { UbicacionCreaeditaComponent } from './page/ubicacion/ubicacion-creaedit
 import { PadredefamiliaCreaeditaComponent } from './page/padredefamilia/padredefamilia-creaedita/padredefamilia-creaedita.component';
 const routes: Routes = [{
   path: 'conductor', component:ConductorComponent, children: [
-    { path: 'nuevo', component:  ConductorCreaeditaComponent}
-
-  ]
-}, {
+    { path: 'nuevo', component: ConductorCreaeditaComponent },
+    { path: 'edicion/:id', component: ConductorCreaeditaComponent }  ]
+ 
+}, 
+{
   path: 'padredefamilia', component: PadredefamiliaComponent, children: [
     { path: 'nuevo', component:  PadredefamiliaCreaeditaComponent},
     { path: 'edicion/:id', component: PadredefamiliaCreaeditaComponent }

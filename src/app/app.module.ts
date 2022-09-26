@@ -29,6 +29,9 @@ import { MatButtonModule } from '@angular/material/button';
 import {MatIconModule} from'@angular/material/icon';
 import { FormsModule } from '@angular/forms';
 import { UbicacionCreaeditaComponent } from './page/ubicacion/ubicacion-creaedita/ubicacion-creaedita.component';
+import { ConductorDialogoComponent } from './page/conductor/conductor-listar/conductor-dialogo/conductor-dialogo.component';
+import { MatDialogModule } from '@angular/material/dialog';
+
 
 @NgModule({
   declarations: [
@@ -51,8 +54,8 @@ import { UbicacionCreaeditaComponent } from './page/ubicacion/ubicacion-creaedit
     VehiculoComponent,
     VehiculoListarComponent,
     ConductorCreaeditaComponent,
-    UbicacionCreaeditaComponent
-    
+    UbicacionCreaeditaComponent,
+    ConductorDialogoComponent    
   ],
   imports: [
     BrowserModule,
@@ -63,7 +66,8 @@ import { UbicacionCreaeditaComponent } from './page/ubicacion/ubicacion-creaedit
     MatInputModule,
     FormsModule,
     MatButtonModule,
-    MatIconModule
+    MatIconModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]
