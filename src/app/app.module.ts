@@ -32,12 +32,12 @@ import { UbicacionCreaeditaComponent } from './page/ubicacion/ubicacion-creaedit
 import { ConductorDialogoComponent } from './page/conductor/conductor-listar/conductor-dialogo/conductor-dialogo.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { ConductorBuscarComponent } from './page/conductor/conductor-buscar/conductor-buscar.component';
-<<<<<<< HEAD
+
 import { UbicacionDialogoComponent } from './page/ubicacion/ubicacion-listar/ubicacion-dialogo/ubicacion-dialogo.component';
-=======
+
 import { PadredefamiliaBuscarComponent } from './page/padredefamilia/padredefamilia-buscar/padredefamilia-buscar.component';
 
->>>>>>> 036da34e4910e2dc27dd9e2f5057770cbe539c1a
+
 
 
 @NgModule({
@@ -64,11 +64,11 @@ import { PadredefamiliaBuscarComponent } from './page/padredefamilia/padredefami
     UbicacionCreaeditaComponent,
     ConductorDialogoComponent,
     ConductorBuscarComponent,
-<<<<<<< HEAD
-    UbicacionDialogoComponent    
-=======
+
+    UbicacionDialogoComponent,
+
     PadredefamiliaBuscarComponent
->>>>>>> 036da34e4910e2dc27dd9e2f5057770cbe539c1a
+
   ],
   imports: [
     BrowserModule,
