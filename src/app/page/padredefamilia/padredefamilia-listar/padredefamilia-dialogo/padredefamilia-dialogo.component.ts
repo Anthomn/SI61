@@ -6,10 +6,10 @@ import { PadredefamiliaService } from 'src/app/service/padredefamilia.service';
   templateUrl: './padredefamilia-dialogo.component.html',
   styleUrls: ['./padredefamilia-dialogo.component.css']
 })
-export class PropietarioDialogoComponent implements OnInit {
+export class PadredefamiliaDialogoComponent implements OnInit {
 
   constructor(private propietarioService: PadredefamiliaService,
-    private dialogRef: MatDialogRef<PropietarioDialogoComponent>
+    private dialogRef: MatDialogRef<PadredefamiliaDialogoComponent>
   ) { }
 
   ngOnInit(): void { }
