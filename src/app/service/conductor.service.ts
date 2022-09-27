@@ -40,7 +40,7 @@ constructor(private http:HttpClient) { }
   }
   setConfirmaEliminacion(estado: Boolean) {
     this.confirmaEliminacion.next(estado);
-  }  
+  }
 
 
 }
