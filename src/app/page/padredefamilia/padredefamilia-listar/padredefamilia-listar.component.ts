@@ -3,7 +3,7 @@ import { Padredefamilia } from 'src/app/model/padredefamilia';
 import {MatTableDataSource} from '@angular/material/table'
 import { PadredefamiliaService } from 'src/app/service/padredefamilia.service';
 import { MatDialog } from '@angular/material/dialog';
-import { PropietarioDialogoComponent } from './padredefamilia-dialogo/padredefamilia-dialogo.component';
+import { PadredefamiliaDialogComponent } from './padredefamilia-dialogo/padredefamilia-dialogo.component';
 @Component({
   selector: 'app-padredefamilia-listar',
   templateUrl: './padredefamilia-listar.component.html',
@@ -28,7 +28,7 @@ export class PadredefamiliaListarComponent implements OnInit {
 
     confirmar(idpadre: number) {
       this.idMayor = idpadre;
-      this.dialog.open(PropietarioDialogoComponent);
+      this.dialog.open(PadredefamiliaDialogComponent);
     }
 
 
