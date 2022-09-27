@@ -9,6 +9,7 @@ export class UbicacionService {
 
   private url:string= "http://localhost:5003/ubicacion"
   private listaCambio = new Subject<Ubicacion[]>()
+  private confirmaEliminacion = new Subject<Boolean>()
   constructor(private http:HttpClient) { }
   listar(){
     return this.http.get<Ubicacion[]>(this.url);
@@ -21,5 +22,20 @@ export class UbicacionService {
   }
   getLista() {
     return this.listaCambio.asObservable();
+  }
+  modificar(conductor: Ubicacion) {
+    return this.http.put(this.url + "/" + conductor.id, conductor);
+  }
+  listarId(id: number) {
+    return this.http.get<Ubicacion>(`${this.url}/${id}`);
+  }
+  eliminar(id: number) {
+    return this.http.delete(this.url + "/" + id);
+  }
+  getConfirmaEliminacion() {
+    return this.confirmaEliminacion.asObservable();
+  }
+  setConfirmaEliminacion(estado: Boolean) {
+    this.confirmaEliminacion.next(estado);
   }
 }

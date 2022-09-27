@@ -549,52 +549,52 @@ module.exports = function () {
     ],
     ubicacion:[
         {
-        idubicacion:1,
+        id:1,
         distrito: "ate",
         hora: 0564,
         },
         {
-        idubicacion:2,
+        id:2,
         distrito: "breña",
         hora: 0210,
         },
         {
-        idubicacion:3,
+        id:3,
         distrito: "barranco",
         hora: 1500,
         },
         {
-        idubicacion:4,
+        id:4,
         distrito: "lince",
         hora: 1430,
         },
         {
-        idubicacion:5,
+        id:5,
         distrito: "molina",
         hora: 1320,
         },
         {
-        idubicacion:6,
+        id:6,
         distrito: "lima",
         hora: 1510,
         },
         {
-        idubicacion:7,
+        id:7,
         distrito: "rimac",
         hora: 1454,
         },
         {
-        idubicacion:8,
+        id:8,
         distrito: "santa anita",
         hora: 0820,
         },
         {
-        idubicacion:9,
+        id:9,
         distrito: "lima",
         hora: 0910,
         },
         {
-        idubicacion:10,
+        id:10,
         distrito: "molina",
         hora: 0730,
         }

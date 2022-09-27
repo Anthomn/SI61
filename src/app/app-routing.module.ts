@@ -37,7 +37,8 @@ const routes: Routes = [{
 
 {
   path: 'ubicacion', component:UbicacionComponent, children: [
-    { path: 'nuevo', component: UbicacionCreaeditaComponent}
+    { path: 'nuevo', component: UbicacionCreaeditaComponent},
+    { path: 'edicion/:id', component: UbicacionCreaeditaComponent }
   ]
 },
 

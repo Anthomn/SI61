@@ -32,6 +32,7 @@ import { UbicacionCreaeditaComponent } from './page/ubicacion/ubicacion-creaedit
 import { ConductorDialogoComponent } from './page/conductor/conductor-listar/conductor-dialogo/conductor-dialogo.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { ConductorBuscarComponent } from './page/conductor/conductor-buscar/conductor-buscar.component';
+import { UbicacionDialogoComponent } from './page/ubicacion/ubicacion-listar/ubicacion-dialogo/ubicacion-dialogo.component';
 
 
 @NgModule({
@@ -57,7 +58,8 @@ import { ConductorBuscarComponent } from './page/conductor/conductor-buscar/cond
     ConductorCreaeditaComponent,
     UbicacionCreaeditaComponent,
     ConductorDialogoComponent,
-    ConductorBuscarComponent    
+    ConductorBuscarComponent,
+    UbicacionDialogoComponent    
   ],
   imports: [
     BrowserModule,
