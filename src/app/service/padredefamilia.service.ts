@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import { Padredefamilia } from '../model/padredefamilia';
 import { environment } from 'src/environments/environment';
-import { Subject } from 'rxjs';
+import { Subject, EMPTY } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
@@ -37,5 +37,12 @@ export class PadredefamiliaService {
   }
   setConfirmaEliminacion(estado: Boolean) {
     this.confirmaEliminacion.next(estado);
+  }
+  buscar(texto: string) {
+    if (texto.length != 0) {
+      return this.http.post<Padredefamilia[]>(`${this.url}/buscar`, texto.toLowerCase(), {
+      });
+    }
+    return EMPTY;
   }
 }
