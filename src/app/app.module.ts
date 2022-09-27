@@ -31,6 +31,7 @@ import { FormsModule } from '@angular/forms';
 import { UbicacionCreaeditaComponent } from './page/ubicacion/ubicacion-creaedita/ubicacion-creaedita.component';
 import { ConductorDialogoComponent } from './page/conductor/conductor-listar/conductor-dialogo/conductor-dialogo.component';
 import { MatDialogModule } from '@angular/material/dialog';
+import { ConductorBuscarComponent } from './page/conductor/conductor-buscar/conductor-buscar.component';
 
 
 @NgModule({
@@ -55,7 +56,8 @@ import { MatDialogModule } from '@angular/material/dialog';
     VehiculoListarComponent,
     ConductorCreaeditaComponent,
     UbicacionCreaeditaComponent,
-    ConductorDialogoComponent    
+    ConductorDialogoComponent,
+    ConductorBuscarComponent    
   ],
   imports: [
     BrowserModule,
