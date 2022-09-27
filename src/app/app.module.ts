@@ -36,6 +36,7 @@ import { ConductorBuscarComponent } from './page/conductor/conductor-buscar/cond
 import { UbicacionDialogoComponent } from './page/ubicacion/ubicacion-listar/ubicacion-dialogo/ubicacion-dialogo.component';
 
 import { PadredefamiliaBuscarComponent } from './page/padredefamilia/padredefamilia-buscar/padredefamilia-buscar.component';
+import { UbicacionBuscarComponent } from './page/ubicacion/ubicacion-buscar/ubicacion-buscar.component';
 
 
 
@@ -67,7 +68,8 @@ import { PadredefamiliaBuscarComponent } from './page/padredefamilia/padredefami
 
     UbicacionDialogoComponent,
 
-    PadredefamiliaBuscarComponent
+    PadredefamiliaBuscarComponent,
+      UbicacionBuscarComponent
 
   ],
   imports: [
