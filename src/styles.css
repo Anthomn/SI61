@@ -21,6 +21,13 @@
     --gradient:linear-gradient(90deg, var(--purple), var(--pink));
 
 }
+
+h3{
+    font-size: 5.5rem;
+    color:#fff;
+    text-transform:uppercase;
+}
+
 *{
     font-family: 'Poppins', sans-serif;
     margin:0; padding:0;
