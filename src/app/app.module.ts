@@ -37,6 +37,7 @@ import { UbicacionDialogoComponent } from './page/ubicacion/ubicacion-listar/ubi
 
 import { PadredefamiliaBuscarComponent } from './page/padredefamilia/padredefamilia-buscar/padredefamilia-buscar.component';
 import { UbicacionBuscarComponent } from './page/ubicacion/ubicacion-buscar/ubicacion-buscar.component';
+import { LandingComponent } from './page/landing/landing.component';
 
 
 
@@ -69,7 +70,8 @@ import { UbicacionBuscarComponent } from './page/ubicacion/ubicacion-buscar/ubic
     UbicacionDialogoComponent,
 
     PadredefamiliaBuscarComponent,
-      UbicacionBuscarComponent
+      UbicacionBuscarComponent,
+      LandingComponent
 
   ],
   imports: [

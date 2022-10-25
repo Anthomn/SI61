@@ -11,55 +11,31 @@ import { VehiculoComponent } from './page/vehiculo/vehiculo.component';
 import { ConductorCreaeditaComponent } from './page/conductor/conductor-creaedita/conductor-creaedita.component';
 import { UbicacionCreaeditaComponent } from './page/ubicacion/ubicacion-creaedita/ubicacion-creaedita.component';
 import { PadredefamiliaCreaeditaComponent } from './page/padredefamilia/padredefamilia-creaedita/padredefamilia-creaedita.component';
-const routes: Routes = [{
-  path: 'conductor', component:ConductorComponent, children: [
-    { path: 'nuevo', component: ConductorCreaeditaComponent },
-    { path: 'edicion/:id', component: ConductorCreaeditaComponent }  ]
+import { LandingComponent } from './page/landing/landing.component';
+const routes: Routes = [
+  {path: 'conductor', component:ConductorComponent},
+    { path: 'conductor/nuevo', component: ConductorCreaeditaComponent },
+    { path: 'conductor/edicion/:id', component: ConductorCreaeditaComponent } ,
  
-}, 
-{
-  path: 'padredefamilia', component: PadredefamiliaComponent, children: [
-    { path: 'nuevo', component:  PadredefamiliaCreaeditaComponent},
-    { path: 'edicion/:id', component: PadredefamiliaCreaeditaComponent }
 
-  ]
-},
-{
-  path: 'estado', component:EstadoComponent, children: [
+{path: 'padredefamilia', component: PadredefamiliaComponent},
+{ path: 'padredefamilia/nuevo', component:  PadredefamiliaCreaeditaComponent},
+{ path: 'padredefamilia/edicion/:id', component: PadredefamiliaCreaeditaComponent },
 
-  ]
-},
-{
-  path: 'historialdeviajes', component:HistorialdeviajesComponent, children: [
+{path: 'estado', component:EstadoComponent},
+{path: 'historialdeviajes', component:HistorialdeviajesComponent},
 
-  ]
-},
 
-{
-  path: 'ubicacion', component:UbicacionComponent, children: [
-    { path: 'nuevo', component: UbicacionCreaeditaComponent},
-    { path: 'edicion/:id', component: UbicacionCreaeditaComponent }
-  ]
-},
+{path: 'ubicacion', component:UbicacionComponent},
+{ path: 'ubicacion/nuevo', component: UbicacionCreaeditaComponent},
+{ path: 'ubicacion/edicion/:id', component: UbicacionCreaeditaComponent },
 
-{
-  path: 'solicitud', component:SolicitudComponent, children: [
+{path: 'solicitud', component:SolicitudComponent},
 
-  ]
-},
+{path: 'viajes', component:ViajesComponent},
 
-{
-  path: 'viajes', component:ViajesComponent, children: [
-
-  ]
-},
-
-{
-  path: 'vehiculo', component:VehiculoComponent, children: [
-
-  ]
-},
-
+{path: 'vehiculo', component:VehiculoComponent},
+{path: "**",component:LandingComponent}
 ];
 
 @NgModule({

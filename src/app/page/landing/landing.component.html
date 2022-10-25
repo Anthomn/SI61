@@ -1,0 +1,297 @@
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="landing.component.css">
+
+</head>
+<body>
+    
+<!-- header section starts  -->
+
+<header>
+
+    <a href="#" class="logo"><span>Save</span>Port</a>
+
+    <input type="checkbox" id="menu-bar">
+    <label for="menu-bar" class="fas fa-bars"></label>
+
+    <nav class="navbar">
+        <a href="#home">home</a>
+        <a href="#features">nuestro servicio</a>
+        <a href="#about">acerca de nosotros</a>
+        <a href="#review">nuestro equipo</a>
+        <a href="#pricing">precios</a>
+        <a href="#contact">contactanos</a>
+        <button mat-button routerLink="/padredefamilia">INGRESA</button>
+    </nav>
+
+</header>
+
+<!-- header section ends -->
+
+<!-- home section starts  -->
+
+<section class="home" id="home">
+
+    <div class="content">
+        <h3>Tu seguridad está en tus manos</h3>
+        <p>Escoge la mejor oportunidad de transporte seguro y <br>confiable para el traslado de tus hijos al colegio.</p>
+        <a href="#" class="btn">download now</a>
+    </div>
+    <!--<div class="image">
+        <img src="images/home-img.png" alt="">
+    </div>-->
+</section>
+
+<!-- home section ends -->
+
+<!-- features section starts  -->
+<section class="features" id="features">
+
+    <h1 class="heading"> Acerca de nosotros </h1>
+
+    <div class="box-container">
+
+        <div class="box">
+            <img src="images/f-icon1.png" alt="">
+            <h3>Nuestra historia</h3>
+            <p> Safeport nace por la necesidad de los padres de familia que no cuenta con tiempo para transportar a sus hijos al colegio y desconfían mucho de los conductores ya que son en su mayoría informales. Esto mismo afecta a los conductores que cuentan con todo lo necesario para dar un buen servicio, pero no logran alcanzar la cantidad de pasajeros que ellos desean y por ello generan menos ingresos.</p>
+
+        </div>
+
+        <div class="box">
+            <img src="images/f-icon2.png" alt="">
+            <h3>Nuestro proposito</h3>
+            <p>Convertirnos en una empresa reconocida por su excelente calidad de servicio, lograr satisfacer la necesidad de alcanzar nuevos clientes para los conductores de movilidad escolar y brindar tranquilidad y seguridad a los padres de familia preocupados por el traslado de sus hijos a sus unidades escolares.</p>
+
+        </div>
+
+    </div>
+</section>
+
+<section class="about" id="about">
+
+    <h1  class =" heading " > Seguridad y eficacia </h1 >
+
+    <div class="column">
+
+      <div class="image">
+            <img  src ="images/about-img.png" alt ="" >
+        </div >
+
+        <div class="content">
+            <h3 > El transporte escolar seguro de tus hijos </h3 >
+            <p> SafePort ofrece una conexión directa con los conductores de movilidad escolar más confiables, seguridad en el viaje de tus hijos y eficacia en el transporte escolar. </p >
+
+        </div >
+
+    </div >
+
+</section>
+
+<section class="review" id="review">
+    <h1 class="heading"> INTEGRANTES </h1>
+
+    <div class="box-container">
+
+        <div class="box">
+            <!--<i class="fas fa-quote-right"></i>-->
+            <div class="user">
+                <img src="images/pic5.png" alt="">
+                <h3>Omar Huaman</h3>
+                <div class="comment">
+                    Ingeniero de sistemas de informacion
+                </div>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="user">
+                <img src="images/pic3.png" alt="">
+                <h3>Jairo Egusquiza</h3>
+                <div class="comment">
+                    Ingeniero de sistemas
+                </div>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="user">
+                <img src="images/pic2.jpg" alt="">
+                <h3>Cely Perez</h3>
+                <div class="comment">
+                    Ingeniera de sistemas
+                </div>
+            </div>
+        </div>
+
+        <div class="box">
+            <!--<i class="fas fa-quote-right"></i>-->
+            <div class="user">
+                <img src="images/pic4.png" alt="">
+                <h3>Andre Alata</h3>
+                <div class="comment">
+                    Ingeniero de sistemas
+                </div>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="user">
+                <img src="images/pic1.png" alt="">
+                <h3>Miguel Vasquez</h3>
+                <div class="comment">
+                    Ingeniero de sistemas 
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<div class="newsletter">
+
+    <h3 class="heading">Únete a la forma más segura y confiable de transporte escolar</h3>
+    <input type="submit" class="btn" value="Unete">
+
+</div>
+
+<section class="pricing" id="pricing">
+
+    <h1 class="heading"> Unete a la mejor movilidad de escolares </h1>
+
+    <div class="box-container">
+
+        <div class="box">
+            <h3 class="title">Pasajeros asegurados</h3>
+            <p>
+                Tendrás garantizado una gran exposición de tu servicio a nuevos clientes.
+            </p>
+        </div>
+
+        <div class="box">
+            <h3 class="title">Las mejores herramientas</h3>
+            <p>
+                SafePort cuenta con las mejores herramientas para facilitar tu servicio.
+            </p>
+        </div>
+
+        <div class="box">
+            <h3 class="title">Seguridad ante todo</h3>
+            <p>
+                Rastreo en tiempo en conexión con clientes confiables y verificados.
+            </p>
+        </div>
+
+        <div class="box">
+            <h3 class="title">Planes justo a tu medida</h3>
+            <ul>
+                <li> <i class="fas fa-check"></i> 4 pasajeros S/200 al mes </li>
+                <li> <i class="fas fa-check"></i> 6 pasajeros S/300 al mes </li>
+                <li> <i class="fas fa-check"></i> 8 pasajeros S/400 al mes </li>
+                <li> <i class="fas fa-check"></i> 10 pasajeros a mas S/500 al mes </li>
+            </ul>
+            <a href="#" class="btn">Averigualo</a>
+        </div>
+
+    </div>
+</section>
+
+<section class="contact" id="contact">
+
+        <div class="image">
+            <img src="images/contact-img.png" alt="">
+        </div>
+    
+        <form action="">
+    
+            <h1 class="heading">Contactanos</h1>
+    
+            <div class="inputBox">
+                <input type="text" required>
+                <label>nombre</label>
+            </div>
+    
+            <div class="inputBox">
+                <input type="text" required>
+                <label>apellido</label>
+            </div>
+    
+            <div class="inputBox">
+                <input type="email" required>
+                <label>email</label>
+            </div>
+    
+            <div class="inputBox">
+                <input type="number" required>
+                <label>phone</label>
+            </div>
+    
+            <div class="inputBox">
+                <textarea required name="" id="" cols="30" rows="10"></textarea>
+                <label>Como podemos ayudarte? </label>
+            </div>
+    
+            <input type="submit" class="btn" value="Enviar mensaje">
+    
+        </form>
+    
+</section>
+
+<div class="footer">
+
+    <div class="box-container">
+    
+        <div class="box">
+            <h3>Acerca de nosotros</h3>
+            <p>Somos un servicio que busca ayudar a padres de familia y a conductores, en la búsqueda de un transporte seguro</p>
+        </div>
+    
+        <div class="box">
+            <h3>quick links</h3>
+            <a href="#">home</a>
+            <a href="#">features</a>
+            <a href="#">about</a>
+            <a href="#">review</a>
+            <a href="#">pricing</a>
+            <a href="#">contact</a>
+        </div>
+    
+        <div class="box">
+            <h3>Siguenos</h3>
+            <a href="#">facebook</a>
+            <a href="#">instagram</a>
+
+        </div>
+    
+        <div class="box">
+            <h3>Informacion de contacto</h3>
+            <div class="info">
+                <i class="fas fa-phone"></i>
+                <p> +51 999-456-789 </p>
+            </div>
+            <div class="info">
+                <i class="fas fa-envelope"></i>
+                <p> safeport@gmail.com </p>
+            </div>
+            <div class="info">
+                <i class="fas fa-map-marker-alt"></i>
+                <p> Lima, Lima - 400104 </p>
+            </div>
+        </div>
+    
+    </div>
+    
+    <h1 class="credit"> &copy; UPC 2022 </h1>
+    
+</div>
+<!-- footer section ends -->
+</body>
+</html>

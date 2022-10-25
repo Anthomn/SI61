@@ -1,4 +1,42 @@
 /* You can add global styles to this file, and also import other style files */
 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400&display=swap');
+
+*{
+    font-family: 'Poppins';
+}
+
+.font-lighter{
+    font-weight: normal;
+}
+
+:root{
+    --black:#152229ce;
+    --green:#78AA28;
+    --greenbrillante:#acdf5a;
+    --yellow:#ECF39E;
+    --purple:#814096;
+    --pink:#F83292;
+    --gradient2:linear-gradient(90deg, var(--green), var(--greenbrillante));
+    --gradient:linear-gradient(90deg, var(--purple), var(--pink));
+
+}
+*{
+    font-family: 'Poppins', sans-serif;
+    margin:0; padding:0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none; border:none;
+    text-transform: capitalize;
+}
+
+*::selection{
+    background:rgb(223, 235, 197);
+    color:rgb(0, 0, 0); /* COLOR DE LA SELECCION */
+}
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body { margin: 0; font-family: 'Poppins', "Helvetica Neue", sans-serif; }
