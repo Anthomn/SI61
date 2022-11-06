@@ -15,7 +15,6 @@ export class Solicitud{
     direccioncolegio: string="";
     estado: string="";
     conductor:Conductor=new Conductor();
-    //idpadredefamilia: number=0;
     padredefamilia:Padredefamilia=new Padredefamilia();
   }
   
