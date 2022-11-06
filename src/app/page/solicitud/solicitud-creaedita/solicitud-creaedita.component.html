@@ -13,7 +13,7 @@
     <br>
     <mat-form-field class="example-full-width">
         <mat-label>Monto Mensual</mat-label>
-        <input matInput placeholder="Monto" [(ngModel)]="solicitud.precio">
+        <input matInput type="number" placeholder="Monto" [(ngModel)]="solicitud.precio">
     </mat-form-field>
     <br>
     <mat-form-field class="example-full-width">
@@ -30,16 +30,24 @@
         <input matInput placeholder="Nombre Hijo" [(ngModel)]="solicitud.nombrehijo">
     </mat-form-field>
     <br>
+
     <mat-form-field class="example-full-width">
         <mat-label>Edad Hijo</mat-label>
-        <input matInput placeholder="Edad Hijo" [(ngModel)]="solicitud.edadhijo">
+        <input matInput type="number" placeholder="Edad Hijo" [(ngModel)]="solicitud.edadhijo">
     </mat-form-field>
     <br> 
-    <mat-form-field class="example-full-width">
-        <mat-label>Estado</mat-label>
-        <input matInput placeholder="Estado" [(ngModel)]="solicitud.estado">
-    </mat-form-field>
-    <br>
+
+    <mat-form-field appearance="fill" >
+        <mat-label>Seleccione Estado</mat-label>
+        <mat-select [(ngModel)]="solicitud.estado" required>
+            <mat-option value="1">Activo</mat-option>
+            <mat-option value="2">Cerrado</mat-option>
+            <mat-option value="3">Anulado</mat-option>
+        </mat-select>
+    </mat-form-field>    
+
+    <br> 
+
   <!--    <mat-form-field class="example-full-width">
         <mat-label>IdPadre</mat-label>
         <input matInput placeholder="Padre" [(ngModel)]="solicitud.idpadredefamilia">
@@ -52,7 +60,7 @@
         <mat-datepicker #picker></mat-datepicker>
     </mat-form-field>
     <br>-->
-    <mat-form-field appearance="fill">
+    <mat-form-field appearance="fill" >
         <mat-label>Seleccione Conductor</mat-label>
         <mat-select [(value)]="idConductorSeleccionado" required>
             <mat-option *ngFor="let p of listaConductores" [value]="p.idConductor">
