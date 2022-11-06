@@ -1,6 +1,6 @@
 
 export class Conductor{
-    id:number=0;
+    idConductor:number=0;
     nombre: string ="";
     apellido: string = "";
     dni: number=0;

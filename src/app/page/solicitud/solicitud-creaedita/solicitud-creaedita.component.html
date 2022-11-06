@@ -1,0 +1,76 @@
+<div class="container">
+    <h1>Solicitud/Contrato</h1>
+    
+    <mat-form-field class="example-full-width">
+        <mat-label>Id</mat-label>
+        <input matInput placeholder="idSolicitud" [(ngModel)]="solicitud.idSolicitud">
+    </mat-form-field>    
+    <br>    
+    <mat-form-field class="example-full-width">
+        <mat-label>Descripcion</mat-label>
+        <input matInput placeholder="Descripcion" [(ngModel)]="solicitud.descripcion">
+    </mat-form-field>
+    <br>
+    <mat-form-field class="example-full-width">
+        <mat-label>Monto Mensual</mat-label>
+        <input matInput placeholder="Monto" [(ngModel)]="solicitud.precio">
+    </mat-form-field>
+    <br>
+    <mat-form-field class="example-full-width">
+        <mat-label>Direccion Casa</mat-label>
+        <input matInput placeholder="direccion" [(ngModel)]="solicitud.direccioncasa">
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+        <mat-label>Direccion Colegio</mat-label>
+        <input matInput placeholder="direccion" [(ngModel)]="solicitud.direccioncolegio">
+    </mat-form-field>
+    <br>
+    <mat-form-field class="example-full-width">
+        <mat-label>Nombre Hijo</mat-label>
+        <input matInput placeholder="Nombre Hijo" [(ngModel)]="solicitud.nombrehijo">
+    </mat-form-field>
+    <br>
+    <mat-form-field class="example-full-width">
+        <mat-label>Edad Hijo</mat-label>
+        <input matInput placeholder="Edad Hijo" [(ngModel)]="solicitud.edadhijo">
+    </mat-form-field>
+    <br> 
+    <mat-form-field class="example-full-width">
+        <mat-label>Estado</mat-label>
+        <input matInput placeholder="Estado" [(ngModel)]="solicitud.estado">
+    </mat-form-field>
+    <br>
+  <!--    <mat-form-field class="example-full-width">
+        <mat-label>IdPadre</mat-label>
+        <input matInput placeholder="Padre" [(ngModel)]="solicitud.idpadredefamilia">
+    </mat-form-field>
+    <br>          
+  <mat-form-field appearance="fill">
+        <mat-label>Fecha</mat-label>
+        <input matInput [matDatepicker]="picker" [(ngModel)]="fechaSeleccionada" [max]="maxFecha">
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+    <br>-->
+    <mat-form-field appearance="fill">
+        <mat-label>Seleccione Conductor</mat-label>
+        <mat-select [(value)]="idConductorSeleccionado" required>
+            <mat-option *ngFor="let p of listaConductores" [value]="p.idConductor">
+                {{p.nombre}}
+            </mat-option>
+        </mat-select>
+    </mat-form-field>
+    <br>
+  <mat-form-field appearance="fill">
+        <mat-label>Seleccione Padre de Familia</mat-label>
+        <mat-select [(value)]="idPadreSeleccionado" required>
+            <mat-option *ngFor="let q of listaPadres" [value]="q.id">
+                {{q.nombre}}
+            </mat-option>
+        </mat-select>
+    </mat-form-field> 
+    <br>
+    <button mat-raised-button color="warn" (click)="aceptar()">Aceptar</button>
+    <button mat-raised-button color="accent" routerLink="/solicitud">Cancelar</button>
+    </div>
+    

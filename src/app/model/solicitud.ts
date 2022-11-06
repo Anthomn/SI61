@@ -1,16 +1,21 @@
-import { Vehiculo } from "./vehiculo";
 import { Conductor } from "./conductor";
 import { Padredefamilia } from "./padredefamilia";
 
 export class Solicitud{
 
-    idsolicitud:number=0;
-    precio: number=0;
-    duracion: string ="";
-    fecha: number = 0;
+    idSolicitud:number=0;
+    precio:number=0;
+    fecha:string="";
     descripcion: string="";
-    vehiculo:Vehiculo=new Vehiculo();
+    fechainicio: string="";
+    fechafin: string="";
+    nombrehijo: string="";
+    edadhijo: number=0;
+    direccioncasa: string="";
+    direccioncolegio: string="";
+    estado: string="";
     conductor:Conductor=new Conductor();
+    //idpadredefamilia: number=0;
     padredefamilia:Padredefamilia=new Padredefamilia();
   }
   

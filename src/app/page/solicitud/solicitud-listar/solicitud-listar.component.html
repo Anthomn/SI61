@@ -1,56 +1,98 @@
-<p>solicitud-listar works!</p>
+<div class="container">
+  <div style="text-align: center;">
+    <h1> LISTA DE SOLICITUDES/CONTRATOS</h1>
+  </div>
+  <app-conductor-buscar></app-conductor-buscar>
+
+
 <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
 
     <!--- Note that these columns can be defined in any order.
-          The actual rendered columns are set as a property on the row definition" 
-         idsolicitud','precio','duracion','fecha','descripcion','vehiculo','conductor','padredefamilia'-->
-         
+          The actual rendered columns are set as a property on the row definition" -->
+  
     <!-- Position Column -->
     <ng-container matColumnDef="idsolicitud">
-      <th mat-header-cell *matHeaderCellDef> idsolicitud. </th>
-      <td mat-cell *matCellDef="let element"> {{element?.idsolicitud}} </td>
+      <th mat-header-cell *matHeaderCellDef> Id </th>
+      <td mat-cell *matCellDef="let element"> {{element.idSolicitud}} </td>
     </ng-container>
   
     <!-- Name Column -->
-    <ng-container matColumnDef="precio">
-      <th mat-header-cell *matHeaderCellDef> precio </th>
-      <td mat-cell *matCellDef="let element"> {{element?.precio}} </td>
+    <ng-container matColumnDef="descripcion">
+      <th mat-header-cell *matHeaderCellDef> Nombre </th>
+      <td mat-cell *matCellDef="let element"> {{element?.descripcion}} </td>
     </ng-container>
   
     <!-- Weight Column -->
-    <ng-container matColumnDef="duracion">
-      <th mat-header-cell *matHeaderCellDef> duracion </th>
-      <td mat-cell *matCellDef="let element"> {{element?.duracion}} </td>
-    </ng-container>
-  
-    <!-- Symbol Column -->
     <ng-container matColumnDef="fecha">
-      <th mat-header-cell *matHeaderCellDef> fecha </th>
+      <th mat-header-cell *matHeaderCellDef> Fecha </th>
       <td mat-cell *matCellDef="let element"> {{element?.fecha}} </td>
     </ng-container>
   
     <!-- Symbol Column -->
-    <ng-container matColumnDef="descripcion">
-      <th mat-header-cell *matHeaderCellDef> descripcion </th>
-      <td mat-cell *matCellDef="let element"> {{element?.descripcion}} </td>
+    <ng-container matColumnDef="fechainicio">
+      <th mat-header-cell *matHeaderCellDef> Fecha Inicio </th>
+      <td mat-cell *matCellDef="let element"> {{element?.fechainicio}} </td>
+    </ng-container>
+
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="fechafin">
+      <th mat-header-cell *matHeaderCellDef> FechaFin </th>
+      <td mat-cell *matCellDef="let element"> {{element?.fechafin}} </td>
+    </ng-container>
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="padredefamilia">
+      <th mat-header-cell *matHeaderCellDef> Padre Familia </th>
+      <td mat-cell *matCellDef="let element"> {{element?.padredefamilia.nombre}}</td>
     </ng-container>
   
-    <ng-container matColumnDef="vehiculo">
-        <th mat-header-cell *matHeaderCellDef> vehiculo </th>
-        <td mat-cell *matCellDef="let element"> {{element?.vehiculo.idvehiculo}} </td>
-      </ng-container>
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="conductor">
+      <th mat-header-cell *matHeaderCellDef> Conductor </th>
+      <td mat-cell *matCellDef="let element"> {{element?.conductor.nombre}} </td>
+    </ng-container>
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="nombrehijo">
+      <th mat-header-cell *matHeaderCellDef> Nombre Hijo </th>
+      <td mat-cell *matCellDef="let element"> {{element?.nombrehijo}} </td>
+    </ng-container>
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="estado">
+      <th mat-header-cell *matHeaderCellDef> Estado </th>
+      <td mat-cell *matCellDef="let element"> {{element?.estado}} </td>
+    </ng-container>
 
-      <ng-container matColumnDef="conductor">
-        <th mat-header-cell *matHeaderCellDef> conductor </th>
-        <td mat-cell *matCellDef="let element"> {{element?.conductor.idconductor}} </td>
-      </ng-container>
+    <ng-container matColumnDef="acciones">
+      <th mat-header-cell *matHeaderCellDef> Acciones </th>
+      <td mat-cell *matCellDef="let element"> 
+        <button mat-mini-fab color="white"
+          [routerLink]="['edicion', element.idSolicitud]">
+            <mat-icon>edit</mat-icon> 
+        </button>
+        <button mat-mini-fab color="white"  (click)="confirmar(element.idSolicitud)">
+          <mat-icon>delete</mat-icon>
+        </button>   
+      </td>   
+    </ng-container>    
 
-      <ng-container matColumnDef="padredefamilia">
-        <th mat-header-cell *matHeaderCellDef> padredefamilia </th>
-        <td mat-cell *matCellDef="let element"> {{element?.padredefamilia.idpadre}} </td>
-      </ng-container>
+    <!--
+    <ng-container matColumnDef="acciones">
+      <th mat-header-cell *matHeaderCellDef> Acciones </th>
+      <td mat-cell *matCellDef="let element"> <button mat-raised-button color="basic"
+              [routerLink]="['edicion', element.idSolicitud]">Actualizar</button>
+          <button mat-raised-button color="warn" (click)="confirmar(element.idSolicitud)">Eliminar</button>
+      </td>
+    </ng-container>
+     -->
 
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
     <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
   </table>
+
+  <div class="example-button-container">
+    <button mat-mini-fab color="primary" aria-label="Example icon button with a plus one icon"
+      routerLink="/solicitud/nuevo">
+      <mat-icon>plus_one</mat-icon>
+    </button>
+  </div>
   
+</div>

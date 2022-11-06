@@ -38,7 +38,17 @@ import { UbicacionDialogoComponent } from './page/ubicacion/ubicacion-listar/ubi
 import { PadredefamiliaBuscarComponent } from './page/padredefamilia/padredefamilia-buscar/padredefamilia-buscar.component';
 import { UbicacionBuscarComponent } from './page/ubicacion/ubicacion-buscar/ubicacion-buscar.component';
 import { LandingComponent } from './page/landing/landing.component';
+import { SolicitudCreaeditaComponent } from './page/solicitud/solicitud-creaedita/solicitud-creaedita.component';
+import { SolicitudBuscarComponent } from './page/solicitud/solicitud-buscar/solicitud-buscar.component';
 
+import { MatSelectModule } from '@angular/material/select';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { DateAdapter, MatNativeDateModule, MAT_DATE_LOCALE } from '@angular/material/core';
+import { CustomDateAdapter } from './custom-adapter';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { SolicitarDialogoComponent } from './page/solicitud/solicitud-listar/solicitar-dialogo/solicitar-dialogo.component';
 
 
 
@@ -66,13 +76,13 @@ import { LandingComponent } from './page/landing/landing.component';
     UbicacionCreaeditaComponent,
     ConductorDialogoComponent,
     ConductorBuscarComponent,
-
     UbicacionDialogoComponent,
-
     PadredefamiliaBuscarComponent,
-      UbicacionBuscarComponent,
-      LandingComponent
-
+    UbicacionBuscarComponent,
+    LandingComponent,
+    SolicitudCreaeditaComponent,
+    SolicitudBuscarComponent,
+    SolicitarDialogoComponent
   ],
   imports: [
     BrowserModule,
@@ -84,9 +94,16 @@ import { LandingComponent } from './page/landing/landing.component';
     FormsModule,
     MatButtonModule,
     MatIconModule,
-    MatDialogModule
+    MatDialogModule,
+    MatFormFieldModule,
+    MatSelectModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatToolbarModule,
+    MatSnackBarModule
   ],
-  providers: [],
+  providers: [{ provide: MAT_DATE_LOCALE, useValue: 'es-ES' },
+  { provide: DateAdapter, useClass: CustomDateAdapter }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

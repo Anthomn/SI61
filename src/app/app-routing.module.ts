@@ -12,6 +12,7 @@ import { ConductorCreaeditaComponent } from './page/conductor/conductor-creaedit
 import { UbicacionCreaeditaComponent } from './page/ubicacion/ubicacion-creaedita/ubicacion-creaedita.component';
 import { PadredefamiliaCreaeditaComponent } from './page/padredefamilia/padredefamilia-creaedita/padredefamilia-creaedita.component';
 import { LandingComponent } from './page/landing/landing.component';
+import { SolicitudCreaeditaComponent } from './page/solicitud/solicitud-creaedita/solicitud-creaedita.component';
 const routes: Routes = [
   {path: 'conductor', component:ConductorComponent},
     { path: 'conductor/nuevo', component: ConductorCreaeditaComponent },
@@ -31,6 +32,8 @@ const routes: Routes = [
 { path: 'ubicacion/edicion/:id', component: UbicacionCreaeditaComponent },
 
 {path: 'solicitud', component:SolicitudComponent},
+{ path: 'solicitud/nuevo', component: SolicitudCreaeditaComponent},
+{ path: 'solicitud/edicion/:id', component: SolicitudCreaeditaComponent },
 
 {path: 'viajes', component:ViajesComponent},
 
