@@ -7,7 +7,7 @@ import { Subject, EMPTY } from 'rxjs';
   providedIn: 'root'
 })
 export class PadredefamiliaService {
-  private url:string= "http://localhost:5003/padredefamilia"
+  private url:string= "http://localhost:8080/padredefamilia"
   private listaCambio = new Subject<Padredefamilia[]>()
   private confirmaEliminacion = new Subject<Boolean>()
   constructor(private http:HttpClient) { }
@@ -30,7 +30,8 @@ export class PadredefamiliaService {
     return this.http.get<Padredefamilia>(`${this.url}/${id}`);
   }
   eliminar(id: number) {
-    return this.http.delete(this.url + "/" + id);
+    //return this.http.delete(this.url + "/" + id);
+    return this.http.delete(`${this.url}/${id}`);
   }
   getConfirmaEliminacion() {
     return this.confirmaEliminacion.asObservable();
@@ -39,9 +40,9 @@ export class PadredefamiliaService {
     this.confirmaEliminacion.next(estado);
   }
   buscar(texto: string) {
+    console.log("algo")
     if (texto.length != 0) {
-      return this.http.post<Padredefamilia[]>(`${this.url}/buscar`, texto.toLowerCase(), {
-      });
+      return this.http.post<Padredefamilia[]>(`${this.url}/buscar`, texto.toLowerCase()/*,{}*/);
     }
     return EMPTY;
   }

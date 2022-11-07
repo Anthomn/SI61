@@ -8,7 +8,7 @@ import { Subject } from 'rxjs';
   providedIn: 'root'
 })
 export class ConductorService {
-url:string= "http://localhost:5003/conductor"
+url:string= "http://localhost:8080/conductor"
 private listaCambio = new Subject<Conductor[]>()
 private confirmaEliminacion = new Subject<Boolean>()
 constructor(private http:HttpClient) { }

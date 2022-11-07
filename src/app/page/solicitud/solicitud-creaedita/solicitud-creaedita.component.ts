@@ -6,7 +6,7 @@ import { Solicitud } from 'src/app/model/solicitud';
 import { ConductorService } from 'src/app/service/conductor.service';
 import { PadredefamiliaService } from 'src/app/service/padredefamilia.service';
 import { SolicitudService } from 'src/app/service/solicitud.service';
-//import * as moment from 'moment';
+import * as moment from 'moment';
 
 @Component({
   selector: 'app-solicitud-creaedita',
@@ -21,9 +21,13 @@ export class SolicitudCreaeditaComponent implements OnInit {
     listaPadres: Padredefamilia[]=[];
     idConductorSeleccionado: number = 0;
     idPadreSeleccionado: number = 0;
-    //fechaSeleccionada: Date = moment().add(-1, 'days').toDate();
+
+    fechaSeleccionada: Date = moment().add(-1, 'days').toDate();
+
     mensaje: string = "";
-    //maxFecha: Date = moment().add(-1, 'days').toDate();
+
+    maxFecha: Date = moment().add(-1, 'days').toDate();
+
     mensaje1: string = "";
     constructor(private solicitudService: SolicitudService,
       private route: ActivatedRoute,
@@ -48,7 +52,9 @@ export class SolicitudCreaeditaComponent implements OnInit {
         q.id = this.idPadreSeleccionado;
         this.solicitud.conductor = p;
         this.solicitud.padredefamilia = q;
-        //this.solicitud.fecha = moment(this.fechaSeleccionada).format('YYYY-MM-DDTHH:mm:ss');
+
+        this.solicitud.fecha = moment(this.fechaSeleccionada).format('YYYY-MM-DDTHH:mm:ss');
+
         if (this.edicion) {
           this.solicitudService.modificar(this.solicitud).subscribe(() => {
             this.solicitudService.listar().subscribe(data => {

@@ -40,6 +40,10 @@ export class PadredefamiliaListarComponent implements OnInit {
         });
       });
     }
+    
+    filtrar(e: any) {
+      this.dataSource.filter = e.target.value.trim();
+    }
 }
 
 

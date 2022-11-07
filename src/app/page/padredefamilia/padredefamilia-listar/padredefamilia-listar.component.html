@@ -2,7 +2,12 @@
   <div style=" text-align: center;">
     <h1>Lista de padres de familia</h1>
   </div>
-<app-padredefamilia-buscar></app-padredefamilia-buscar>
+<!--<app-padredefamilia-buscar></app-padredefamilia-buscar> Búsqueda usando BD-->
+<!--Búsqueda en el front/cliente-->
+<mat-form-field>
+  <input matInput (keyup)="filtrar($event)" placeholder="Buscar">
+</mat-form-field>
+
 <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
 
     <!--- Note that these columns can be defined in any order.
@@ -11,7 +16,7 @@
     <!-- Position Column -->
     <ng-container matColumnDef="idpadre">
       <th mat-header-cell *matHeaderCellDef> No. </th>
-      <td mat-cell *matCellDef="let element"> {{element?.id}} </td>
+      <td mat-cell *matCellDef="let element"> {{element.id}} </td>
     </ng-container>
 
     <!-- Name Column -->
@@ -51,7 +56,7 @@
     <ng-container matColumnDef="acciones">
       <th mat-header-cell *matHeaderCellDef> Acciones </th>
       <td mat-cell *matCellDef="let element"> <button mat-raised-button color="primary"
-          [routerLink]="['edicion', element?.id]">Actualizar</button>
+          [routerLink]="['edicion', element.id]">Actualizar</button>
       </td>
     </ng-container>
     <ng-container matColumnDef="accion2">
