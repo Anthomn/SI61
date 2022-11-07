@@ -48,6 +48,8 @@ export class PadredefamiliaCreaeditaComponent implements OnInit {
     if (this.edicion) {
       this.padredefamiliaService.listarId(this.idpadre).subscribe(data => {
         this.padredefamilia = data;
+        //nuevo
+        console.log(data);
       })
     }
 
