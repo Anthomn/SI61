@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment';
 import {HttpClient} from '@angular/common/http';
 import { Conductor } from '../model/conductor';
-import { Subject } from 'rxjs';
+import { Subject, EMPTY } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -41,6 +41,12 @@ constructor(private http:HttpClient) { }
   setConfirmaEliminacion(estado: Boolean) {
     this.confirmaEliminacion.next(estado);
   }
-
+  buscar(texto: string) {
+    console.log("algo")
+    if (texto.length != 0) {
+      return this.http.post<Conductor[]>(`${this.url}/buscar`, texto.toLowerCase()/*,{}*/);
+    }
+    return EMPTY;
+  }
 
 }

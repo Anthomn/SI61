@@ -49,6 +49,8 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { SolicitarDialogoComponent } from './page/solicitud/solicitud-listar/solicitar-dialogo/solicitar-dialogo.component';
+import { VehiculoCreaeditaComponent } from './page/vehiculo/vehiculo-creaedita/vehiculo-creaedita.component';
+import { VehiculoDialogoComponent } from './page/vehiculo/vehiculo-listar/vehiculo-dialogo/vehiculo-dialogo.component';
 
 
 
@@ -82,7 +84,9 @@ import { SolicitarDialogoComponent } from './page/solicitud/solicitud-listar/sol
     LandingComponent,
     SolicitudCreaeditaComponent,
     SolicitudBuscarComponent,
-    SolicitarDialogoComponent
+    SolicitarDialogoComponent,
+    VehiculoCreaeditaComponent,
+    VehiculoDialogoComponent
   ],
   imports: [
     BrowserModule,

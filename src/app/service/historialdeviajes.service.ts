@@ -6,7 +6,7 @@ import { Historialdeviajes } from '../model/historialdeviajes';
 })
 export class HistorialdeviajesService {
 
-  private url:string= "http://localhost:5003/historialdeviajes"
+  private url:string= "http://localhost:5003/historialviaje"
 
   constructor(private http:HttpClient) { }
   listar(){

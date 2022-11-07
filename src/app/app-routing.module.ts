@@ -1,3 +1,4 @@
+import { VehiculoCreaeditaComponent } from './page/vehiculo/vehiculo-creaedita/vehiculo-creaedita.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ConductorComponent } from './page/conductor/conductor.component';
@@ -37,7 +38,11 @@ const routes: Routes = [
 
 {path: 'viajes', component:ViajesComponent},
 
+
 {path: 'vehiculo', component:VehiculoComponent},
+{ path: 'vehiculo/nuevo', component: VehiculoCreaeditaComponent},
+{ path: 'vehiculo/edicion/:id', component: VehiculoCreaeditaComponent },
+
 {path: "**",component:LandingComponent}
 ];
 
