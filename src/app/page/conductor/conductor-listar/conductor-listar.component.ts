@@ -46,5 +46,8 @@ export class ConductorListarComponent implements OnInit {
     });
 
   }  
+  filtrar(e: any) {
+    this.dataSource.filter = e.target.value.trim();
+  }
 
 }
