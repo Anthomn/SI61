@@ -15,7 +15,7 @@ import { SolicitarDialogoComponent } from './solicitar-dialogo/solicitar-dialogo
 export class SolicitudListarComponent implements OnInit {
     lista: Solicitud[] = [];
     dataSource: MatTableDataSource<Solicitud> = new MatTableDataSource();
-    displayedColumns: string[] = ['idsolicitud', 'descripcion', 'padredefamilia','conductor', 'nombrehijo', 'estado', 'acciones'];
+    displayedColumns: string[] = ['idsolicitud','fecha', 'descripcion','precio' ,'padredefamilia','conductor', 'nombrehijo','edadhijo','direccioncasa','direccioncolegio', 'estado', 'acciones'];
     //'fecha','fechainicio', 'fechafin', //'padredefamilia'
     private idMayor: number = 0;
   
