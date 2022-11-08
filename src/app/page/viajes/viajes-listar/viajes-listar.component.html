@@ -1,30 +1,77 @@
-<p>viajes-listar works!</p>
+<div class="container">
+  <div style="text-align: center;">
+    <h1> LISTA DE VIAJES</h1>
+  </div>
+  <app-conductor-buscar></app-conductor-buscar>
+
+
 <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
 
     <!--- Note that these columns can be defined in any order.
           The actual rendered columns are set as a property on the row definition" -->
-  
+
     <!-- Position Column -->
     <ng-container matColumnDef="idviaje">
-        <th mat-header-cell *matHeaderCellDef> idviaje </th>
-        <td mat-cell *matCellDef="let element"> {{element?.idviaje}} </td>
-      </ng-container>
-    
-      <ng-container matColumnDef="pasajeros">
-        <th mat-header-cell *matHeaderCellDef> pasajeros </th>
-        <td mat-cell *matCellDef="let element"> {{element?.pasajeros}} </td>
-      </ng-container>
-      <!-- Symbol Column -->
-      <ng-container matColumnDef="direccion">
-        <th mat-header-cell *matHeaderCellDef> direccion </th>
-        <td mat-cell *matCellDef="let element"> {{element?.direccion}} </td>
-      </ng-container>
-      <ng-container matColumnDef="solicitud">
-        <th mat-header-cell *matHeaderCellDef> solicitud </th>
-        <td mat-cell *matCellDef="let element"> {{element?.solicitud.idsolicitud}} </td>
-      </ng-container>
+      <th mat-header-cell *matHeaderCellDef> Id </th>
+      <td mat-cell *matCellDef="let element"> {{element.idviaje}} </td>
+    </ng-container>
 
-      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-    </table>
-    
+    <!-- Name Column -->
+    <ng-container matColumnDef="idvehiculo">
+      <th mat-header-cell *matHeaderCellDef> Id Vehiculo </th>
+      <td mat-cell *matCellDef="let element"> {{element?.idvehiculo}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="fecha">
+      <th mat-header-cell *matHeaderCellDef> Fecha </th>
+      <td mat-cell *matCellDef="let element"> {{element?.fecha}} </td>
+    </ng-container>
+
+    <!-- Weight Column -->
+    <ng-container matColumnDef="horainicio">
+      <th mat-header-cell *matHeaderCellDef> Hora inicio </th>
+      <td mat-cell *matCellDef="let element"> {{element?.horainicio}} </td>
+    </ng-container>
+
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="horafinal">
+      <th mat-header-cell *matHeaderCellDef> Hora fin </th>
+      <td mat-cell *matCellDef="let element"> {{element?.horafin}} </td>
+    </ng-container>
+
+
+    <ng-container matColumnDef="acciones">
+      <th mat-header-cell *matHeaderCellDef> Acciones </th>
+      <td mat-cell *matCellDef="let element">
+        <button mat-mini-fab color="white"
+          [routerLink]="['edicion', element.idSolicitud]">
+            <mat-icon>edit</mat-icon>
+        </button>
+        <button mat-mini-fab color="white"  (click)="confirmar(element.idSolicitud)">
+          <mat-icon>delete</mat-icon>
+        </button>
+      </td>
+    </ng-container>
+
+    <!--
+    <ng-container matColumnDef="acciones">
+      <th mat-header-cell *matHeaderCellDef> Acciones </th>
+      <td mat-cell *matCellDef="let element"> <button mat-raised-button color="basic"
+              [routerLink]="['edicion', element.idSolicitud]">Actualizar</button>
+          <button mat-raised-button color="warn" (click)="confirmar(element.idSolicitud)">Eliminar</button>
+      </td>
+    </ng-container>
+     -->
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+
+  <div class="example-button-container">
+    <button mat-mini-fab color="primary" aria-label="Example icon button with a plus one icon"
+      routerLink="/viaje/nuevo">
+      <mat-icon>plus_one</mat-icon>
+    </button>
+  </div>
+
+</div>
