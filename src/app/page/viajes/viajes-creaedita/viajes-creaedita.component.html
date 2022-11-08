@@ -1,0 +1,47 @@
+<div class="container">
+
+  <h1>Viajes</h1>
+
+  <mat-form-field class="example-full-width">
+    <mat-label>idviaje</mat-label>
+    <input matInput placeholder="idviaje" [(ngModel)]="viaje.idviaje">
+  </mat-form-field>
+
+  <br>
+
+  <mat-form-field appearance="fill" >
+    <mat-label>Seleccione Conductor</mat-label>
+    <mat-select [(value)]="idVehiculoselecionado" required>
+        <mat-option *ngFor="let p of listadeVehiculos" [value]="p.idvehiculo">
+            {{p.placa}}
+        </mat-option>
+    </mat-select>
+</mat-form-field>
+<br>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Fecha</mat-label>
+    <input matInput [matDatepicker]="picker" [(ngModel)]="fecha" [max]="maxFecha">
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>
+  <br>
+
+  <br>
+  <mat-form-field class="example-full-width">
+      <mat-label>horainicio</mat-label>
+      <input matInput required placeholder="horainicio" [(ngModel)]="viaje.horainicio">
+
+  </mat-form-field>
+  <br>
+  <mat-form-field class="example-full-width">
+      <mat-label>horafin</mat-label>
+      <input type="horafin" matInput required placeholder="horafin" [(ngModel)]="viaje.horafin">
+    </mat-form-field>
+
+  <br>
+  <button mat-raised-button color="primary" (click)="aceptar()">Aceptar</button>
+  <button mat-raised-button color="warn" routerLink="/viaje">Cancelar</button>
+  <p>{{mensaje}}</p>
+
+</div>
