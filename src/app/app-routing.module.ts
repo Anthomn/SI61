@@ -1,3 +1,4 @@
+import { EstadoCreaeditaComponent } from './page/estado/estado-creaedita/estado-creaedita.component';
 import { VehiculoCreaeditaComponent } from './page/vehiculo/vehiculo-creaedita/vehiculo-creaedita.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
@@ -16,16 +17,20 @@ import { LandingComponent } from './page/landing/landing.component';
 import { SolicitudCreaeditaComponent } from './page/solicitud/solicitud-creaedita/solicitud-creaedita.component';
 const routes: Routes = [
   {path: 'conductor', component:ConductorComponent},
-    { path: 'conductor/nuevo', component: ConductorCreaeditaComponent },
-    { path: 'conductor/edicion/:id', component: ConductorCreaeditaComponent } ,
+  { path: 'conductor/nuevo', component: ConductorCreaeditaComponent },
+  { path: 'conductor/edicion/:id', component: ConductorCreaeditaComponent } ,
  
 
-{path: 'padredefamilia', component: PadredefamiliaComponent},
-{ path: 'padredefamilia/nuevo', component:  PadredefamiliaCreaeditaComponent},
-{ path: 'padredefamilia/edicion/:id', component: PadredefamiliaCreaeditaComponent },
+  {path: 'padredefamilia', component: PadredefamiliaComponent},
+  {path: 'padredefamilia/nuevo', component:  PadredefamiliaCreaeditaComponent},
+  {path: 'padredefamilia/edicion/:id', component: PadredefamiliaCreaeditaComponent },
 
-{path: 'estado', component:EstadoComponent},
-{path: 'historialdeviajes', component:HistorialdeviajesComponent},
+
+  {path: 'estado', component:EstadoComponent},
+  { path: 'estado/nuevo', component: EstadoCreaeditaComponent },
+  { path: 'estado/edicion/:id', component: EstadoCreaeditaComponent } ,
+
+  {path: 'historialdeviajes', component:HistorialdeviajesComponent},
 
 
 {path: 'ubicacion', component:UbicacionComponent},

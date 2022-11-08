@@ -1,0 +1,64 @@
+<div class="container">
+    <h1>ESTADO</h1>
+    
+    
+    <mat-form-field class="example-full-width">
+        <mat-label>Direccion Partida</mat-label>
+        <input matInput placeholder="direccionpartida" [(ngModel)]="estado.direccionpartida">
+    </mat-form-field>
+    <br>
+    <mat-form-field class="example-full-width">
+        <mat-label>Direccion Llegada</mat-label>
+        <input matInput placeholder="direccionpartida" [(ngModel)]="estado.direccionpartida">
+    </mat-form-field>
+    <br>
+    <mat-form-field class="example-full-width">
+        <mat-label>Duracion</mat-label>
+        <input matInput type="number" placeholder="duracion" [(ngModel)]="estado.duracion">
+    </mat-form-field>
+    <br>
+    <mat-form-field class="example-full-width">
+        <mat-label>Comentario</mat-label>
+        <input matInput placeholder="comentario" [(ngModel)]="estado.comentario">
+    </mat-form-field>
+    <br> 
+
+   
+  <!--    <mat-form-field class="example-full-width">
+        <mat-label>IdPadre</mat-label>
+        <input matInput placeholder="Padre" [(ngModel)]="solicitud.idpadredefamilia">
+    </mat-form-field>
+    <br>          
+-->
+       <mat-form-field appearance="fill" >
+        <mat-label>Seleccione Viaje</mat-label>
+        <mat-select [(value)]="idViajeSeleccionado" required>
+            <mat-option *ngFor="let p of listaViaje" [value]="p.idviaje">
+                {{p.direccion}}
+            </mat-option>
+        </mat-select>
+    </mat-form-field>
+    <br>
+    <mat-form-field appearance="fill">
+        <mat-label>Seleccione Solicitud</mat-label>
+        <mat-select [(value)]="idSolicitudSeleccionado" required>
+            <mat-option *ngFor="let q of listaSolicitud" [value]="q.idSolicitud">
+                {{q.descripcion}}
+            </mat-option>
+        </mat-select>
+    </mat-form-field> 
+    <br>
+    <mat-form-field appearance="fill">
+        <mat-label>Seleccione Ubicacion</mat-label>
+        <mat-select [(value)]="idUbicacionSeleccionado" required>
+            <mat-option *ngFor="let t of listaUbicacion" [value]="t.id">
+                {{t.distrito}}
+            </mat-option>
+        </mat-select>
+    </mat-form-field> 
+    <br>
+    <button mat-raised-button color="warn" (click)="aceptar()">Aceptar</button>
+    <button mat-raised-button color="accent" routerLink="/solicitud">Cancelar</button>
+    </div>
+    
+
