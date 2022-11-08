@@ -7,7 +7,7 @@ import { Subject, EMPTY } from 'rxjs';
 })
 export class UbicacionService {
 
-  private url:string= "http://localhost:5003/ubicacion"
+  private url:string= "http://localhost:8080/ubicacion"
   private listaCambio = new Subject<Ubicacion[]>()
   private confirmaEliminacion = new Subject<Boolean>()
   constructor(private http:HttpClient) { }
@@ -24,13 +24,15 @@ export class UbicacionService {
     return this.listaCambio.asObservable();
   }
   modificar(conductor: Ubicacion) {
-    return this.http.put(this.url + "/" + conductor.id, conductor);
+    return this.http.put(this.url , conductor);
+    //return this.http.put(this.url + "/" + conductor.id, conductor);
   }
   listarId(id: number) {
     return this.http.get<Ubicacion>(`${this.url}/${id}`);
   }
   eliminar(id: number) {
-    return this.http.delete(this.url + "/" + id);
+    return this.http.delete(`${this.url}/${id}`);
+    //return this.http.delete(this.url + "/" + id);
   }
   getConfirmaEliminacion() {
     return this.confirmaEliminacion.asObservable();

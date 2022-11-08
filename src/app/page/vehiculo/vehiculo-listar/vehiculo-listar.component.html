@@ -1,4 +1,13 @@
 <p>vehiculo-listar works!</p>
+<div class="container">
+  <div style="text-align: center;">
+    <h1> LISTA DE VEHICULOS</h1>
+</div>
+
+<mat-form-field>
+  <input matInput (keyup)="filtrar($event)" placeholder="Buscar">
+</mat-form-field>
+
 <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
 
     <!--- Note that these columns can be defined in any order.
@@ -7,7 +16,7 @@
     <!-- Position Column -->
     <ng-container matColumnDef="idvehiculo">
         <th mat-header-cell *matHeaderCellDef> idvehiculo </th>
-        <td mat-cell *matCellDef="let element"> {{element?.idvehiculo}} </td>
+        <td mat-cell *matCellDef="let element"> {{element?.id}} </td>
       </ng-container>
     
       <ng-container matColumnDef="aniomodelo">
@@ -37,10 +46,29 @@
 
       <ng-container matColumnDef="conductor">
         <th mat-header-cell *matHeaderCellDef> conductor </th>
-        <td mat-cell *matCellDef="let element"> {{element?.conductor.idConductor}} </td>
+        <td mat-cell *matCellDef="let element"> {{element?.conductor.nombre}} </td>
       </ng-container>
-    
+
+      <ng-container matColumnDef="acciones">
+        <th mat-header-cell *matHeaderCellDef> Acciones </th>
+        <td mat-cell *matCellDef="let element"> 
+          <button mat-mini-fab color="white"
+            [routerLink]="['edicion', element.id]">
+              <mat-icon>edit</mat-icon> 
+          </button>
+          <button mat-mini-fab color="white"  (click)="confirmar(element.id)">
+            <mat-icon>delete</mat-icon>
+          </button>   
+        </td>   
+      </ng-container> 
+
       <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
       <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-</table>
-
+  </table>
+  <div class="example-button-container">
+    <button mat-mini-fab color="primary" aria-label="Example icon button with a plus one icon"
+      routerLink="/vehiculo/nuevo">
+      <mat-icon>plus_one</mat-icon>
+    </button>
+  </div>
+</div>

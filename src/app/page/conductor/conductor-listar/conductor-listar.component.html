@@ -2,9 +2,11 @@
   <div style="text-align: center;">
     <h1> LISTA DE CONDUCTORES</h1>
   </div>
-  <app-conductor-buscar></app-conductor-buscar>
-
-
+ <!-- <app-conductor-buscar></app-conductor-buscar>-->
+<!--Búsqueda en el front/cliente-->
+  <mat-form-field>
+    <input matInput (keyup)="filtrar($event)" placeholder="Buscar">
+  </mat-form-field>
 <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
 
     <!--- Note that these columns can be defined in any order.

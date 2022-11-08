@@ -1,9 +1,7 @@
 import { Conductor } from "./conductor"
 
 export class Vehiculo{
-
-    
-    idvehiculo:number=0;
+    id:number=0;
     aniomodelo:number=0;
     placa: string ="";
     color: string = "";

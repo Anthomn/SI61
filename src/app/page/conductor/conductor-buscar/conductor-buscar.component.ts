@@ -14,6 +14,10 @@ export class ConductorBuscarComponent implements OnInit {
   ngOnInit(): void {
   }
   buscar(e: any) {
+    this.conductorService.buscar(e.target.value).subscribe(data=>{
+      this.conductorService.setLista(data);
+    });
+    /*
     let array: Conductor[] = [];
     this.conductorService.listar().subscribe(data => {
       data.forEach((element, index) => {
@@ -34,6 +38,6 @@ export class ConductorBuscarComponent implements OnInit {
         }
       });
       this.conductorService.setLista(array);
-    })
+    })*/
   }
 }
