@@ -48,5 +48,8 @@ export class SolicitudListarComponent implements OnInit {
         });
       });
     }
+    filtrar(e: any) {
+      this.dataSource.filter = e.target.value.trim();
+    }
   }
   
