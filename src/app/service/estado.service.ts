@@ -8,7 +8,7 @@ import { Subject } from 'rxjs';
 })
 export class EstadoService {
 
-  private url: string = `${environment.host}/solicitud`
+  private url: string = "http://localhost:8080/estado"
   private listaCambio = new Subject<Estado[]>()
   private confirmaEliminacion = new Subject<Boolean>()
   constructor(private http:HttpClient) { }

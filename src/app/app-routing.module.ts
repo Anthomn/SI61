@@ -21,7 +21,6 @@ import { LandingComponent } from './page/landing/landing.component';
 import { SolicitudCreaeditaComponent } from './page/solicitud/solicitud-creaedita/solicitud-creaedita.component';
 const routes: Routes = [
   {path: 'conductor', component:ConductorComponent},
-  
   { path: 'conductor/nuevo', component: ConductorCreaeditaComponent },
   { path: 'conductor/edicion/:id', component: ConductorCreaeditaComponent } ,
 

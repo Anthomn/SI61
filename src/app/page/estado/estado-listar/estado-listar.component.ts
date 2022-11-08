@@ -12,7 +12,7 @@ import { MatTableDataSource } from '@angular/material/table';
 export class EstadoListarComponent implements OnInit {
   lista:Estado[] = [];  
   dataSource:MatTableDataSource<Estado> = new MatTableDataSource();
-  displayedColumns:string[]=['idviaje', 'idsolicitud', 'idubicacion','direccionpartida','direccionllegada','duracion','comentarios' ]
+  displayedColumns:string[]=['idestado','idviaje', 'idsolicitud', 'idubicacion','direccionpartida','direccionllegada','duracion','comentarios', 'acciones' ]
   private idMayor: number = 0;
   constructor(private estadoService: EstadoService,private dialog:MatDialog) { }
 
@@ -42,6 +42,9 @@ export class EstadoListarComponent implements OnInit {
     this.estadoService.setLista(data);/* se ejecuta la línea 27 */
   });
   });
+  }
+  filtrar(e: any) {
+    this.dataSource.filter = e.target.value.trim();
   }
 }
 

@@ -98,8 +98,7 @@ import { EstadoDialogoComponent } from './page/estado/estado-listar/estado-dialo
 
     ViajeCreaeditaComponent,
     ViajesBuscarComponent,
-    ViajeDialogoComponent
-
+    ViajeDialogoComponent,
     VehiculoCreaeditaComponent,
     VehiculoDialogoComponent,
     EstadoCreaeditaComponent,

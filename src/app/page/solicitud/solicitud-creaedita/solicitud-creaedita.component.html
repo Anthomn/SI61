@@ -71,6 +71,7 @@
         </mat-select>
     </mat-form-field>
     <br>
+
   <mat-form-field appearance="fill">
         <mat-label>Seleccione Padre de Familia</mat-label>
         <mat-select [(value)]="idPadreSeleccionado" required>
@@ -78,7 +79,8 @@
                 {{q.nombre}}
             </mat-option>
         </mat-select>
-    </mat-form-field> 
+    </mat-form-field>
+     
     <br>
     <button mat-raised-button color="warn" (click)="aceptar()">Aceptar</button>
     <button mat-raised-button color="accent" routerLink="/solicitud">Cancelar</button>

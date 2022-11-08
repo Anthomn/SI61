@@ -48,17 +48,17 @@ export class EstadoCreaeditaComponent implements OnInit {
     this.ubicacionService.listar().subscribe(data => { this.listaUbicacion = data });
   }
   aceptar() {
-    if (this.estado.direccionpartida.length > 0 &&
-      this.estado.direccionllegada.length > 0 && this.estado.duracion >0 && this.idSolicitudSeleccionado >0 && this.idUbicacionSeleccionado>0 && this.idViajeSeleccionado>0) {
+    if (this.estado.direccionPartida.length > 0 &&
+      this.estado.direccionLlegada.length > 0 && this.estado.duracion >0 && this.idSolicitudSeleccionado >0 && this.idUbicacionSeleccionado>0 && this.idViajeSeleccionado>0) {
       let p = new Viajes();
       let q = new Solicitud();
       let t = new Ubicacion();
-      p.idviaje = this.idViajeSeleccionado;
+      p.idViaje = this.idViajeSeleccionado;
       q.idSolicitud = this.idSolicitudSeleccionado;
       t.id=this.idUbicacionSeleccionado;
-      this.estado.idviaje = p;
-      this.estado.idsolicitud = q;
-      this.estado.idubicacion=t;      
+      this.estado.viaje = p;
+      this.estado.solicitud = q;
+      this.estado.ubicacion=t;      
 
       if (this.edicion) {
         this.estadoService.modificar(this.estado).subscribe(() => {
@@ -91,9 +91,9 @@ export class EstadoCreaeditaComponent implements OnInit {
       this.estadoService.listarId(this.id).subscribe(data => {
         this.estado = data
         console.log(data);
-        this.idViajeSeleccionado = data.idviaje.idviaje;
-        this.idSolicitudSeleccionado = data.idsolicitud.idSolicitud;
-        this.idUbicacionSeleccionado =data.idubicacion.id;
+        this.idViajeSeleccionado = data.viaje.idViaje;
+        this.idSolicitudSeleccionado = data.solicitud.idSolicitud;
+        this.idUbicacionSeleccionado =data.ubicacion.id;
       });
 
     }

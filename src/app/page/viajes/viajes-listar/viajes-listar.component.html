@@ -2,7 +2,11 @@
   <div style="text-align: center;">
     <h1> LISTA DE VIAJES</h1>
   </div>
-  <app-conductor-buscar></app-conductor-buscar>
+  <!--<app-conductor-buscar></app-conductor-buscar>-->
+<!--Búsqueda en el front/cliente-->
+<mat-form-field>
+  <input matInput (keyup)="filtrar($event)" placeholder="Buscar">
+</mat-form-field>
 
 
 <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
@@ -13,13 +17,13 @@
     <!-- Position Column -->
     <ng-container matColumnDef="idviaje">
       <th mat-header-cell *matHeaderCellDef> Id </th>
-      <td mat-cell *matCellDef="let element"> {{element.idviaje}} </td>
+      <td mat-cell *matCellDef="let element"> {{element.idViaje}} </td>
     </ng-container>
 
     <!-- Name Column -->
     <ng-container matColumnDef="idvehiculo">
       <th mat-header-cell *matHeaderCellDef> Id Vehiculo </th>
-      <td mat-cell *matCellDef="let element"> {{element?.idvehiculo}} </td>
+      <td mat-cell *matCellDef="let element"> {{element?.vehiculo.placa}} </td>
     </ng-container>
 
     <ng-container matColumnDef="fecha">
@@ -42,26 +46,16 @@
 
     <ng-container matColumnDef="acciones">
       <th mat-header-cell *matHeaderCellDef> Acciones </th>
-      <td mat-cell *matCellDef="let element">
+      <td mat-cell *matCellDef="let element"> 
         <button mat-mini-fab color="white"
-          [routerLink]="['edicion', element.idSolicitud]">
-            <mat-icon>edit</mat-icon>
+          [routerLink]="['edicion', element.idViaje]">
+            <mat-icon>edit</mat-icon> 
         </button>
-        <button mat-mini-fab color="white"  (click)="confirmar(element.idSolicitud)">
+        <button mat-mini-fab color="white"  (click)="confirmar(element.idViaje)">
           <mat-icon>delete</mat-icon>
-        </button>
-      </td>
-    </ng-container>
-
-    <!--
-    <ng-container matColumnDef="acciones">
-      <th mat-header-cell *matHeaderCellDef> Acciones </th>
-      <td mat-cell *matCellDef="let element"> <button mat-raised-button color="basic"
-              [routerLink]="['edicion', element.idSolicitud]">Actualizar</button>
-          <button mat-raised-button color="warn" (click)="confirmar(element.idSolicitud)">Eliminar</button>
-      </td>
-    </ng-container>
-     -->
+        </button>   
+      </td>   
+    </ng-container> 
 
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
     <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>

@@ -13,7 +13,7 @@ import { ViajesService } from 'src/app/service/viajes.service';
 export class ViajesListarComponent implements OnInit {
   lista: Viajes[] = [];
   dataSource: MatTableDataSource<Viajes> = new MatTableDataSource();
-  displayedColumns: string[] = ['idviaje','idvehiculo', 'fecha','horainicio' ,'horafinal'];
+  displayedColumns: string[] = ['idviaje','idvehiculo', 'fecha','horainicio' ,'horafinal', 'acciones'];
   private idMayor: number = 0;
 
   constructor(private viajeService: ViajesService, private dialog: MatDialog) { }
@@ -44,6 +44,9 @@ export class ViajesListarComponent implements OnInit {
         this.viajeService.setLista(data);/* se ejecuta la línea 27 */
       });
     });
+  }
+  filtrar(e: any) {
+    this.dataSource.filter = e.target.value.trim();
   }
 
 }

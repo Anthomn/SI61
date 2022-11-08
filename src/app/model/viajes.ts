@@ -2,9 +2,9 @@ import { Vehiculo } from "./vehiculo";
 
 export class Viajes{
 
-    idviaje:number=0;
-    idvehiculo: Vehiculo=new Vehiculo();
-    fecha:string ="";
+    idViaje:number=0;
+    vehiculo: Vehiculo=new Vehiculo();
+    fecha:number=0;
     horainicio:string ="";
     horafin:string ="";
 }

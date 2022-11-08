@@ -4,6 +4,7 @@ import * as moment from 'moment';
 import { Vehiculo } from 'src/app/model/vehiculo';
 import { Viajes } from 'src/app/model/viajes';
 import { ViajesService } from 'src/app/service/viajes.service';
+import { VehiculoService } from 'src/app/service/vehiculo.service';
 
 @Component({
   selector: 'app-viajes-creaedita',
@@ -19,8 +20,11 @@ export class ViajeCreaeditaComponent implements OnInit {
   fecha: Date = moment().add(-1, 'days').toDate();
   idviaje: number = 0;
   maxFecha: Date = moment().add(-1, 'days').toDate();
+  mensaje1: string = "";
 
-  constructor(private viajeService: ViajesService, private router: Router, private route: ActivatedRoute) { }
+  constructor(private viajeService: ViajesService,
+    private vehiculoService: VehiculoService,
+    private router: Router, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
     this.route.params.subscribe((data: Params) => {
@@ -28,31 +32,38 @@ export class ViajeCreaeditaComponent implements OnInit {
       this.edicion = data['id'] != null;
       this.init()
     });
+    this.vehiculoService.listar().subscribe(data => {this.listadeVehiculos = data});
   }
+
   aceptar():void {
-    let q = new Vehiculo();
-    q.idvehiculo = this.idVehiculoselecionado;
-    this.viaje.idvehiculo = q;
+    if (this.viaje.idViaje > 0 && this.idVehiculoselecionado > 0 && this.viaje.horafin.length>0 && this.viaje.horainicio.length>0 && this.viaje.fecha >0){
+      let q = new Vehiculo();
+      q.id = this.idVehiculoselecionado;
+      this.viaje.vehiculo = q;
 
-    this.viaje.fecha = moment(this.fecha).format('YYYY-MM-DDTHH:mm:ss');
-
-    if (this.viaje.idviaje > 0 && this.idVehiculoselecionado > 0 && this.viaje.horafin.length>0 && this.viaje.horainicio.length>0 && this.viaje.fecha.length>0){
       if (this.edicion){
-        this.viajeService.modificar(this.viaje).subscribe(data => {
+        this.viajeService.modificar(this.viaje).subscribe( () => {
           this.viajeService.listar().subscribe(data => {
             this.viajeService.setLista(data);
-          })
-        })
+          });
+        });
+
       }else {
-        this.viajeService.insertar(this.viaje).subscribe(data => {
+        this.viajeService.insertar(this.viaje).subscribe(() => {
           this.viajeService.listar().subscribe(data => {
             this.viajeService.setLista(data);
-          })
-        })
+          });
+        }, err => {
+          //this.mensaje=err
+          
+          console.log(err);
+        });
       }
-      this.router.navigate(['viaje'])
-    }else{
-      this.mensaje =  "Complete los valores requeridos";
+      this.router.navigate(['viaje']);
+
+    }
+    else {
+      this.mensaje1 = "Complete los valores requeridos";
     }
   }
   init() {
@@ -61,7 +72,7 @@ export class ViajeCreaeditaComponent implements OnInit {
         this.viaje = data;
         //nuevo
         console.log(data);
-        this.idVehiculoselecionado = data.idvehiculo.idvehiculo;
+        this.idVehiculoselecionado = data.vehiculo.id;
 
       })
     }
