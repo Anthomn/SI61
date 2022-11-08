@@ -60,6 +60,8 @@ import { VehiculoDialogoComponent } from './page/vehiculo/vehiculo-listar/vehicu
 import { EstadoCreaeditaComponent } from './page/estado/estado-creaedita/estado-creaedita.component';
 import { EstadoBuscarComponent } from './page/estado/estado-buscar/estado-buscar.component';
 import { EstadoDialogoComponent } from './page/estado/estado-listar/estado-dialogo/estado-dialogo.component';
+import { HistorialdeviajesCreaeditaComponent } from './page/historialdeviajes/historialdeviajes-creaedita/historialdeviajes-creaedita.component';
+import { HistorialdeviajesDialogoComponent } from './page/historialdeviajes/historialdeviajes-listar/historialdeviajes-dialogo/historialdeviajes-dialogo.component';
 
 
 
@@ -103,7 +105,9 @@ import { EstadoDialogoComponent } from './page/estado/estado-listar/estado-dialo
     VehiculoDialogoComponent,
     EstadoCreaeditaComponent,
     EstadoBuscarComponent,
-    EstadoDialogoComponent
+    EstadoDialogoComponent,
+    HistorialdeviajesCreaeditaComponent,
+    HistorialdeviajesDialogoComponent
 
   ],
   imports: [

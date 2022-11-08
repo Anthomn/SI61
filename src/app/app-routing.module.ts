@@ -1,3 +1,4 @@
+import { HistorialdeviajesCreaeditaComponent } from './page/historialdeviajes/historialdeviajes-creaedita/historialdeviajes-creaedita.component';
 
 import { ViajeCreaeditaComponent } from './page/viajes/viajes-creaedita/viajes-creaedita.component';
 
@@ -33,8 +34,9 @@ const routes: Routes = [
   { path: 'estado/nuevo', component: EstadoCreaeditaComponent },
   { path: 'estado/edicion/:id', component: EstadoCreaeditaComponent } ,
 
-  {path: 'historialdeviajes', component:HistorialdeviajesComponent},
-
+  {path: 'historialviaje', component:HistorialdeviajesComponent},
+  { path: 'historialviaje/nuevo', component: HistorialdeviajesCreaeditaComponent},
+  { path: 'historialviaje/edicion/:id', component: HistorialdeviajesCreaeditaComponent },
 
 {path: 'ubicacion', component:UbicacionComponent},
 { path: 'ubicacion/nuevo', component: UbicacionCreaeditaComponent},

@@ -1,8 +1,8 @@
-import { Viajes } from "./viajes";
+import { Viajes } from 'src/app/model/viajes';
 
 export class Historialdeviajes{
-    idhistorial:number=0;
+    idHistorial:number=0;
     observaciones: string ="";
-    viajes:Viajes=new Viajes();
+    viaje:Viajes=new Viajes();
 }
   

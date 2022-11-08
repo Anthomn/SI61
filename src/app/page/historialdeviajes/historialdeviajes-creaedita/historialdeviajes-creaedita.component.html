@@ -1,0 +1,21 @@
+<p>historialdeviajes-creaedita works!</p>
+<div class="container">
+<h1>HISTORIAL VIAJES</h1>
+<mat-form-field class="example-full-width">
+    <mat-label>Observaciones</mat-label>
+    <input matInput placeholder="direccionpartida" [(ngModel)]="historialviaje.observaciones">
+</mat-form-field>
+<br> 
+<mat-form-field appearance="fill" >
+    <mat-label>Seleccione Viaje</mat-label>
+    <mat-select [(value)]="idViajeSeleccionado" required>
+        <mat-option *ngFor="let p of listaViaje" [value]="p.idViaje">
+            {{p.fecha}}
+        </mat-option>
+    </mat-select>
+</mat-form-field>
+<br>
+<button mat-raised-button color="warn" (click)="aceptar()">Aceptar</button>
+<button mat-raised-button color="accent" routerLink="/historialviaje">Cancelar</button>
+<br> 
+</div>
