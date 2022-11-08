@@ -12,6 +12,7 @@ import { PadredefamiliaComponent } from './page/padredefamilia/padredefamilia.co
 import { PadredefamiliaListarComponent } from './page/padredefamilia/padredefamilia-listar/padredefamilia-listar.component';
 import { EstadoComponent } from './page/estado/estado.component';
 import { EstadoListarComponent } from './page/estado/estado-listar/estado-listar.component';
+
 import { PadredefamiliaCreaeditaComponent } from './page/padredefamilia/padredefamilia-creaedita/padredefamilia-creaedita.component';
 import { HistorialdeviajesComponent } from './page/historialdeviajes/historialdeviajes.component';
 import { HistorialdeviajesListarComponent } from './page/historialdeviajes/historialdeviajes-listar/historialdeviajes-listar.component';
@@ -51,6 +52,9 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { SolicitarDialogoComponent } from './page/solicitud/solicitud-listar/solicitar-dialogo/solicitar-dialogo.component';
 import { VehiculoCreaeditaComponent } from './page/vehiculo/vehiculo-creaedita/vehiculo-creaedita.component';
 import { VehiculoDialogoComponent } from './page/vehiculo/vehiculo-listar/vehiculo-dialogo/vehiculo-dialogo.component';
+import { EstadoCreaeditaComponent } from './page/estado/estado-creaedita/estado-creaedita.component';
+import { EstadoBuscarComponent } from './page/estado/estado-buscar/estado-buscar.component';
+import { EstadoDialogoComponent } from './page/estado/estado-listar/estado-dialogo/estado-dialogo.component';
 
 
 
@@ -86,7 +90,10 @@ import { VehiculoDialogoComponent } from './page/vehiculo/vehiculo-listar/vehicu
     SolicitudBuscarComponent,
     SolicitarDialogoComponent,
     VehiculoCreaeditaComponent,
-    VehiculoDialogoComponent
+    VehiculoDialogoComponent,
+    EstadoCreaeditaComponent,
+    EstadoBuscarComponent,
+    EstadoDialogoComponent
   ],
   imports: [
     BrowserModule,
