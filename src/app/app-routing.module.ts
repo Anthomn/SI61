@@ -1,3 +1,4 @@
+import { ViajeCreaeditaComponent } from './page/viajes/viajes-creaedita/viajes-creaedita.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ConductorComponent } from './page/conductor/conductor.component';
@@ -17,7 +18,7 @@ const routes: Routes = [
   {path: 'conductor', component:ConductorComponent},
     { path: 'conductor/nuevo', component: ConductorCreaeditaComponent },
     { path: 'conductor/edicion/:id', component: ConductorCreaeditaComponent } ,
- 
+
 
 {path: 'padredefamilia', component: PadredefamiliaComponent},
 { path: 'padredefamilia/nuevo', component:  PadredefamiliaCreaeditaComponent},
@@ -35,7 +36,9 @@ const routes: Routes = [
 { path: 'solicitud/nuevo', component: SolicitudCreaeditaComponent},
 { path: 'solicitud/edicion/:id', component: SolicitudCreaeditaComponent },
 
-{path: 'viajes', component:ViajesComponent},
+{path: 'viaje', component:ViajesComponent},
+{ path: 'viaje/nuevo', component: ViajeCreaeditaComponent},
+{ path: 'viaje/edicion/:id', component: ViajeCreaeditaComponent },
 
 {path: 'vehiculo', component:VehiculoComponent},
 {path: "**",component:LandingComponent}

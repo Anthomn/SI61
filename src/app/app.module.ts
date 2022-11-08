@@ -49,6 +49,9 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { SolicitarDialogoComponent } from './page/solicitud/solicitud-listar/solicitar-dialogo/solicitar-dialogo.component';
+import { ViajeCreaeditaComponent } from './page/viajes/viajes-creaedita/viajes-creaedita.component';
+import { ViajesBuscarComponent } from './page/viajes/viajes-buscar/viajes-buscar.component';
+import { ViajeDialogoComponent } from './page/viajes/viajes-listar/viaje-dialogo/viaje-dialogo.component';
 
 
 
@@ -82,7 +85,10 @@ import { SolicitarDialogoComponent } from './page/solicitud/solicitud-listar/sol
     LandingComponent,
     SolicitudCreaeditaComponent,
     SolicitudBuscarComponent,
-    SolicitarDialogoComponent
+    SolicitarDialogoComponent,
+    ViajeCreaeditaComponent,
+    ViajesBuscarComponent,
+    ViajeDialogoComponent
   ],
   imports: [
     BrowserModule,

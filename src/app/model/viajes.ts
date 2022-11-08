@@ -1,9 +1,10 @@
-import { Solicitud } from "./solicitud";
+import { Vehiculo } from "./vehiculo";
 
 export class Viajes{
 
     idviaje:number=0;
-    pasajeros: number=0;
-    direccion: string ="";
-    solicitud:Solicitud=new Solicitud();
+    idvehiculo: Vehiculo=new Vehiculo();
+    fecha:string ="";
+    horainicio:string ="";
+    horafin:string ="";
 }
