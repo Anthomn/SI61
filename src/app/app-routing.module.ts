@@ -20,6 +20,9 @@ import { UbicacionCreaeditaComponent } from './page/ubicacion/ubicacion-creaedit
 import { PadredefamiliaCreaeditaComponent } from './page/padredefamilia/padredefamilia-creaedita/padredefamilia-creaedita.component';
 import { LandingComponent } from './page/landing/landing.component';
 import { SolicitudCreaeditaComponent } from './page/solicitud/solicitud-creaedita/solicitud-creaedita.component';
+import { MarcaComponent } from './page/marca/marca.component';
+import { MarcaCreaeditaComponent } from './page/marca/marca-creaedita/marca-creaedita.component';
+
 const routes: Routes = [
   {path: 'conductor', component:ConductorComponent},
   { path: 'conductor/nuevo', component: ConductorCreaeditaComponent },
@@ -54,6 +57,10 @@ const routes: Routes = [
 {path: 'vehiculo', component:VehiculoComponent},
 { path: 'vehiculo/nuevo', component: VehiculoCreaeditaComponent},
 { path: 'vehiculo/edicion/:id', component: VehiculoCreaeditaComponent },
+
+{path: 'marca', component:MarcaComponent},
+{ path: 'marca/nuevo', component: MarcaCreaeditaComponent},
+{ path: 'marca/edicion/:id', component: MarcaCreaeditaComponent },
 
 {path: "**",component:LandingComponent}
 ];

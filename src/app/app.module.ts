@@ -62,6 +62,10 @@ import { EstadoBuscarComponent } from './page/estado/estado-buscar/estado-buscar
 import { EstadoDialogoComponent } from './page/estado/estado-listar/estado-dialogo/estado-dialogo.component';
 import { HistorialdeviajesCreaeditaComponent } from './page/historialdeviajes/historialdeviajes-creaedita/historialdeviajes-creaedita.component';
 import { HistorialdeviajesDialogoComponent } from './page/historialdeviajes/historialdeviajes-listar/historialdeviajes-dialogo/historialdeviajes-dialogo.component';
+import { MarcaComponent } from './page/marca/marca.component';
+import { MarcaListarComponent } from './page/marca/marca-listar/marca-listar.component';
+import { MarcaCreaeditaComponent } from './page/marca/marca-creaedita/marca-creaedita.component';
+import { MarcaDialogoComponent } from './page/marca/marca-listar/marca-dialogo/marca-dialogo.component';
 
 
 
@@ -107,7 +111,11 @@ import { HistorialdeviajesDialogoComponent } from './page/historialdeviajes/hist
     EstadoBuscarComponent,
     EstadoDialogoComponent,
     HistorialdeviajesCreaeditaComponent,
-    HistorialdeviajesDialogoComponent
+    HistorialdeviajesDialogoComponent,
+    MarcaComponent,
+    MarcaListarComponent,
+    MarcaCreaeditaComponent,
+    MarcaDialogoComponent
 
   ],
   imports: [

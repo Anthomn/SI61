@@ -1,3 +1,4 @@
+import { Marca } from './marca';
 import { Conductor } from "./conductor"
 
 export class Vehiculo{
@@ -6,7 +7,7 @@ export class Vehiculo{
     placa: string ="";
     color: string = "";
     estado: string ="";
-    marca: string ="";
+    marca: Marca=new Marca();
     caracteristica: string ="";
     conductor:Conductor=new Conductor();
 

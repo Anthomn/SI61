@@ -1,3 +1,5 @@
+import { MarcaService } from './../../../service/marca.service';
+import { Marca } from './../../../model/marca';
 import { ConductorService } from 'src/app/service/conductor.service';
 import { ActivatedRoute, Params, Router } from '@angular/router';
 import { VehiculoService } from 'src/app/service/vehiculo.service';
@@ -16,14 +18,16 @@ export class VehiculoCreaeditaComponent implements OnInit {
   id: number = 0;
   edicion: boolean = false;
   listaConductores: Conductor[] = [];
+  listaMarcas: Marca[] =[];
+  idMarcaSeleccionada: number = 0;
   idConductorSeleccionado: number = 0;
   mensaje: string = "";
   mensaje1: string = "";
   
   constructor( private vehiculoService: VehiculoService,
       private route: ActivatedRoute,
-      private router: Router, private conductorservice:ConductorService
-
+      private router: Router, private conductorservice:ConductorService,
+      private marcaservice:MarcaService
   ) { }
 
   ngOnInit(): void {
@@ -33,14 +37,20 @@ export class VehiculoCreaeditaComponent implements OnInit {
       this.init();
     });
     this.conductorservice.listar().subscribe(data => { this.listaConductores = data });
+    this.marcaservice.listar().subscribe(data => {this.listaMarcas = data});
   }
 
   aceptar() {
     if (this.vehiculo.placa.length > 0 &&
-      this.idConductorSeleccionado > 0 ) {
+      this.idConductorSeleccionado > 0 &&
+      this.idMarcaSeleccionada > 0 ) {
       let p = new Conductor();
+      let q = new Marca();
       p.idConductor = this.idConductorSeleccionado;
+      q.idMarca = this.idMarcaSeleccionada;
       this.vehiculo.conductor = p;
+      this.vehiculo.marca = q;
+
 
       if (this.edicion) {
         this.vehiculoService.modificar(this.vehiculo).subscribe(() => {
@@ -74,6 +84,7 @@ export class VehiculoCreaeditaComponent implements OnInit {
         this.vehiculo = data
         console.log(data);
         this.idConductorSeleccionado = data.conductor.idConductor;
+        this.idMarcaSeleccionada = data.marca.idMarca;
       });
 
     }

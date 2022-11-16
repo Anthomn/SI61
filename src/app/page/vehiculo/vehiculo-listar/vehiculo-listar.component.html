@@ -38,6 +38,11 @@
         <th mat-header-cell *matHeaderCellDef> estado </th>
         <td mat-cell *matCellDef="let element"> {{element?.estado}} </td>
       </ng-container>
+
+      <ng-container matColumnDef="idmarca">
+        <th mat-header-cell *matHeaderCellDef> idmarca </th>
+        <td mat-cell *matCellDef="let element"> {{element?.marca.nombremarca}} </td>
+      </ng-container>
       <!-- Symbol Column -->
       <ng-container matColumnDef="caracteristica">
         <th mat-header-cell *matHeaderCellDef> caracteristica </th>

@@ -28,11 +28,6 @@
     </mat-form-field>
     <br>
     <mat-form-field class="example-full-width">
-        <mat-label>Marca</mat-label>
-        <input matInput placeholder="Licencia" [(ngModel)]="vehiculo.marca">
-    </mat-form-field>
-    <br>
-    <mat-form-field class="example-full-width">
         <mat-label>Caracteristica</mat-label>
         <input matInput placeholder="Licencia" [(ngModel)]="vehiculo.caracteristica">
     </mat-form-field>
@@ -42,6 +37,15 @@
         <mat-select [(value)]="idConductorSeleccionado" required>
             <mat-option *ngFor="let p of listaConductores" [value]="p.idConductor">
                 {{p.nombre}}
+            </mat-option>
+        </mat-select>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+        <mat-label>Seleccione Marca</mat-label>
+        <mat-select [(value)]="idMarcaSeleccionada" required>
+            <mat-option *ngFor="let q of listaMarcas" [value]="q.idMarca">
+                {{q.nombremarca}}
             </mat-option>
         </mat-select>
     </mat-form-field>

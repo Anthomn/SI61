@@ -13,7 +13,7 @@ import { VehiculoService } from 'src/app/service/vehiculo.service';
 export class VehiculoListarComponent implements OnInit {
   lista:Vehiculo[] = [];
   dataSource:MatTableDataSource<Vehiculo>=new MatTableDataSource();
-  displayedColumns:string[]=['idvehiculo', 'aniomodelo', 'placa', 'color', 'estado', 'caracteristica', 'conductor','acciones']
+  displayedColumns:string[]=['idvehiculo', 'aniomodelo', 'placa', 'color', 'estado', 'caracteristica', 'idmarca','conductor','acciones']
   private idMayor: number = 0;
 
   constructor(private VehiculoService: VehiculoService, private dialog: MatDialog) { }

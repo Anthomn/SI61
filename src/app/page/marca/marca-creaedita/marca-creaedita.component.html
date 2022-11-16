@@ -1,0 +1,21 @@
+<div class="container">
+
+    <h1>MARCA</h1>
+  
+    <mat-form-field class="example-full-width">
+      <mat-label>idMarca</mat-label>
+      <input matInput placeholder="idMarca" [(ngModel)]="marca.idMarca">
+    </mat-form-field>
+  
+    <mat-form-field class="example-full-width">
+      <mat-label>nombremarca</mat-label>
+      <input matInput required placeholder="nombremarca" [(ngModel)]="marca.nombremarca">
+    </mat-form-field>
+  
+    <br>
+    
+    <button mat-raised-button color="primary" (click)="aceptar()">Aceptar</button>
+    <button mat-raised-button color="warn" routerLink="/marca">Cancelar</button>
+    <p>{{mensaje}}</p>
+</div>
+  

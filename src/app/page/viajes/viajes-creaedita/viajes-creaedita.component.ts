@@ -17,7 +17,7 @@ export class ViajeCreaeditaComponent implements OnInit {
   edicion: boolean = false;
   listadeVehiculos: Vehiculo[]=[];
   idVehiculoselecionado: number = 0;
-  fecha: Date = moment().add(-1, 'days').toDate();
+  fechaSeleccionada: Date = moment().add(-1, 'days').toDate();
   idviaje: number = 0;
   maxFecha: Date = moment().add(-1, 'days').toDate();
   mensaje1: string = "";
@@ -36,11 +36,13 @@ export class ViajeCreaeditaComponent implements OnInit {
   }
 
   aceptar():void {
-    if (this.viaje.idViaje > 0 && this.idVehiculoselecionado > 0 && this.viaje.horafin.length>0 && this.viaje.horainicio.length>0 && this.viaje.fecha >0){
+    if (this.idVehiculoselecionado > 0 && this.viaje.horafin.length>0 && this.viaje.horainicio.length>0){
       let q = new Vehiculo();
       q.id = this.idVehiculoselecionado;
       this.viaje.vehiculo = q;
 
+      this.viaje.fecha = moment(this.fechaSeleccionada).format('YYYY-MM-DDTHH:mm:ss');
+      
       if (this.edicion){
         this.viajeService.modificar(this.viaje).subscribe( () => {
           this.viajeService.listar().subscribe(data => {
