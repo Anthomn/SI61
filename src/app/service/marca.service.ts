@@ -43,7 +43,7 @@ export class MarcaService {
   buscar(texto: string) {
     console.log("algo")
     if (texto.length != 0) {
-      return this.http.post<Marca[]>(`${this.url}/buscar`, texto.toLowerCase()/*,{}*/);
+      return this.http.post<Marca[]>(`${this.url}/buscarmarca`, texto.toLowerCase()/*,{}*/);
     }
     return EMPTY;
   }

@@ -2,7 +2,8 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Estado } from '../model/estado';
 import { environment } from 'src/environments/environment';
-import { Subject } from 'rxjs';
+import { Subject, EMPTY } from 'rxjs';
+
 @Injectable({
   providedIn: 'root'
 })
@@ -29,8 +30,12 @@ export class EstadoService {
     return this.http.delete(`${this.url}/${id}`);
   }
   buscar(texto: string) {
-
-    return this.http.post<Estado[]>(`${this.url}/buscar`, texto);
+    console.log("algo")
+    if (texto.length != 0) {
+      return this.http.post<Estado[]>(`${this.url}/buscardistrito`, texto.toLowerCase()/*,{}*/);
+    }
+    return EMPTY;
+    //return this.http.post<Estado[]>(`${this.url}/buscar`, texto);
   }
   listarId(id: number) {
 

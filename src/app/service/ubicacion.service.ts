@@ -42,7 +42,7 @@ export class UbicacionService {
   }
   buscar(texto: string) {
     if (texto.length != 0) {
-      return this.http.post<Ubicacion[]>(`${this.url}/buscar`, texto.toLowerCase(), {
+      return this.http.post<Ubicacion[]>(`${this.url}/buscardistrito`, texto.toLowerCase(), {
       });
     }
     return EMPTY;

@@ -44,7 +44,7 @@ constructor(private http:HttpClient) { }
   buscar(texto: string) {
     console.log("algo")
     if (texto.length != 0) {
-      return this.http.post<Conductor[]>(`${this.url}/buscar`, texto.toLowerCase()/*,{}*/);
+      return this.http.post<Conductor[]>(`${this.url}/buscarnombre`, texto.toLowerCase()/*,{}*/);
     }
     return EMPTY;
   }

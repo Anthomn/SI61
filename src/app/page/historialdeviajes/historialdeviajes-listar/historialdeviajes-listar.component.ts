@@ -13,7 +13,7 @@ import { HistorialdeviajesService } from 'src/app/service/historialdeviajes.serv
 export class HistorialdeviajesListarComponent implements OnInit {
   lista:Historialdeviajes[] = [];
   dataSource:MatTableDataSource<Historialdeviajes>=new MatTableDataSource();
-  displayedColumns:string[]=['idhistorial', 'observaciones', 'viajes',  'acciones']
+  displayedColumns:string[]=['idhistorial', 'observaciones', 'viajes', 'placa', 'acciones']
   private idMayor: number = 0;
 
   constructor(private historialService: HistorialdeviajesService,private dialog: MatDialog) { }

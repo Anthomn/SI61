@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Historialdeviajes } from '../model/historialdeviajes';
-import { Subject } from 'rxjs';
+import { Subject, EMPTY } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
@@ -31,8 +31,12 @@ export class HistorialdeviajesService {
   }
 
   buscar(texto: string) {
-  
-    return this.http.post<Historialdeviajes[]>(`${this.url}/buscar`, texto);
+    if (texto.length != 0) {
+      return this.http.post<Historialdeviajes[]>(`${this.url}/buscarhistorial`, texto.toLowerCase(), {
+      });
+    }
+    return EMPTY;
+    //return this.http.post<Historialdeviajes[]>(`${this.url}/buscar`, texto);
   }
 
   listarId(id: number) {

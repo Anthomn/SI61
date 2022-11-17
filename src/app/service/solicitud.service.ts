@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Solicitud } from '../model/solicitud';
-import { Subject } from 'rxjs';
+import { Subject, EMPTY } from 'rxjs';
 import { environment } from 'src/environments/environment';
 
 @Injectable({
@@ -30,8 +30,12 @@ export class SolicitudService {
       return this.http.delete(`${this.url}/${id}`);
     }
     buscar(texto: string) {
-  
-      return this.http.post<Solicitud[]>(`${this.url}/buscar`, texto);
+      console.log("algo")
+    if (texto.length != 0) {
+      return this.http.post<Solicitud[]>(`${this.url}/buscarnombrehijo`, texto.toLowerCase()/*,{}*/);
+    }
+    return EMPTY;
+    //return this.http.post<Solicitud[]>(`${this.url}/buscar`, texto);
     }
     listarId(id: number) {
   

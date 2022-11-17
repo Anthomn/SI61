@@ -42,7 +42,7 @@ export class ViajesService {
   buscar(texto: string) {
     console.log("algo")
     if (texto.length != 0) {
-      return this.http.post<Viajes[]>(`${this.url}/buscar`, texto.toLowerCase()/*,{}*/);
+      return this.http.post<Viajes[]>(`${this.url}/buscarfecha`, texto.toLowerCase()/*,{}*/);
     }
     return EMPTY;
   }

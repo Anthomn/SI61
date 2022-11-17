@@ -3,10 +3,10 @@
   <div style="text-align: center;">
     <h1> LISTA DE VEHICULOS</h1>
   </div>
-
-  <mat-form-field>
+  <app-vehiculo-buscar></app-vehiculo-buscar>
+  <!--<mat-form-field>
     <input matInput (keyup)="filtrar($event)" placeholder="Buscar">
-  </mat-form-field>
+  </mat-form-field>-->
 
   <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
 

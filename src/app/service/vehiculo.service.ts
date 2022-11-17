@@ -31,7 +31,7 @@ private url:string= "http://localhost:8080/vehiculo"
 
   buscar(texto: string) {
   
-    return this.http.post<Vehiculo[]>(`${this.url}/buscar`, texto);
+    return this.http.post<Vehiculo[]>(`${this.url}/buscarplaca`, texto);
   }
 
   listarId(id: number) {
