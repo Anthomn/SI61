@@ -49,4 +49,12 @@ constructor(private http:HttpClient) { }
     return EMPTY;
   }
 
+  reporteverificado(){
+    return this.http.get<Conductor[]>(`${this.url}/buscarverificado`);
+  }
+
+  reportetiempo(){
+    return this.http.get<Conductor[]>(`${this.url}/buscartiempo`)
+  }
+
 }
