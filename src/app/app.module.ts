@@ -69,6 +69,8 @@ import { MarcaDialogoComponent } from './page/marca/marca-listar/marca-dialogo/m
 import { MarcaBuscarComponent } from './page/marca/marca-buscar/marca-buscar.component';
 import { HistorialdeviajesBuscarComponent } from './page/historialdeviajes/historialdeviajes-buscar/historialdeviajes-buscar.component';
 import { VehiculoBuscarComponent } from './page/vehiculo/vehiculo-buscar/vehiculo-buscar.component';
+import { ViajesReportefechaComponent } from './page/viajes/viajes-reportefecha/viajes-reportefecha.component';
+import { ViajesReportevehiculosComponent } from './page/viajes/viajes-reportevehiculos/viajes-reportevehiculos.component';
 
 
 
@@ -121,7 +123,9 @@ import { VehiculoBuscarComponent } from './page/vehiculo/vehiculo-buscar/vehicul
     MarcaDialogoComponent,
     MarcaBuscarComponent,
     HistorialdeviajesBuscarComponent,
-    VehiculoBuscarComponent
+    VehiculoBuscarComponent,
+    ViajesReportefechaComponent,
+    ViajesReportevehiculosComponent
 
   ],
   imports: [

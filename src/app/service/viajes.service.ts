@@ -1,3 +1,4 @@
+import { Respuesta } from './../model/respuesta';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Viajes } from '../model/viajes';
@@ -45,5 +46,11 @@ export class ViajesService {
       return this.http.post<Viajes[]>(`${this.url}/buscarfecha`, texto.toLowerCase()/*,{}*/);
     }
     return EMPTY;
+  }
+  reporte(){
+    return this.http.get<Viajes[]>(`${this.url}/buscarfechamayor`);
+  }
+  buscarcantidadvehiculo(){
+    return this.http.get<Respuesta[]>(`${this.url}/buscarcantidadviajes`);
   }
 }
