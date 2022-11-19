@@ -12,8 +12,8 @@
   <mat-form-field appearance="fill" >
     <mat-label>Seleccione Vehiculo</mat-label>
     <mat-select [(value)]="idVehiculoselecionado" required>
-        <mat-option *ngFor="let p of listadeVehiculos" [value]="p.id">
-            {{p.placa}}
+        <mat-option *ngFor="let q of listadeVehiculos" [value]="q.id">
+            {{q.placa}}
         </mat-option>
     </mat-select>
 </mat-form-field>

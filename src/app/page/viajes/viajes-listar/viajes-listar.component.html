@@ -24,7 +24,7 @@
     <!-- Name Column -->
     <ng-container matColumnDef="idvehiculo">
       <th mat-header-cell *matHeaderCellDef> Id Vehiculo </th>
-      <td mat-cell *matCellDef="let element"> {{element?.vehiculo.placa}} </td>
+      <td mat-cell *matCellDef="let element"> {{element.vehiculo.placa}} </td>
     </ng-container>
 
     <ng-container matColumnDef="fecha">
@@ -47,16 +47,16 @@
 
     <ng-container matColumnDef="acciones">
       <th mat-header-cell *matHeaderCellDef> Acciones </th>
-      <td mat-cell *matCellDef="let element"> 
+      <td mat-cell *matCellDef="let element">
         <button mat-mini-fab color="white"
           [routerLink]="['edicion', element.idViaje]">
-            <mat-icon>edit</mat-icon> 
+            <mat-icon>edit</mat-icon>
         </button>
         <button mat-mini-fab color="white"  (click)="confirmar(element.idViaje)">
           <mat-icon>delete</mat-icon>
-        </button>   
-      </td>   
-    </ng-container> 
+        </button>
+      </td>
+    </ng-container>
 
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
     <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
