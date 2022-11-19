@@ -22,6 +22,8 @@ import { LandingComponent } from './page/landing/landing.component';
 import { SolicitudCreaeditaComponent } from './page/solicitud/solicitud-creaedita/solicitud-creaedita.component';
 import { MarcaComponent } from './page/marca/marca.component';
 import { MarcaCreaeditaComponent } from './page/marca/marca-creaedita/marca-creaedita.component';
+import { SolicitudReporteComponent } from './page/solicitud/solicitud-reporte/solicitud-reporte.component';
+import { SolicitudReporteingresoComponent } from './page/solicitud/solicitud-reporteingreso/solicitud-reporteingreso.component';
 
 const routes: Routes = [
   {path: 'conductor', component:ConductorComponent},
@@ -45,9 +47,11 @@ const routes: Routes = [
 { path: 'ubicacion/nuevo', component: UbicacionCreaeditaComponent},
 { path: 'ubicacion/edicion/:id', component: UbicacionCreaeditaComponent },
 
-{path: 'solicitud', component:SolicitudComponent},
+{ path: 'solicitud', component:SolicitudComponent},
 { path: 'solicitud/nuevo', component: SolicitudCreaeditaComponent},
 { path: 'solicitud/edicion/:id', component: SolicitudCreaeditaComponent },
+{ path: 'solicitud/reportes', component: SolicitudReporteComponent},
+{ path: 'solicitud/reportesingreso', component: SolicitudReporteingresoComponent},
 
 {path: 'viaje', component:ViajesComponent},
 { path: 'viaje/nuevo', component: ViajeCreaeditaComponent},
