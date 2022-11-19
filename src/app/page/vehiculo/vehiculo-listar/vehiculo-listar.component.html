@@ -37,7 +37,7 @@
         <th mat-header-cell *matHeaderCellDef> estado </th>
         <td mat-cell *matCellDef="let element"> {{element?.estado}} </td>
       </ng-container>
-
+      
       <ng-container matColumnDef="idmarca">
         <th mat-header-cell *matHeaderCellDef> idmarca </th>
         <td mat-cell *matCellDef="let element"> {{element?.marca.nombremarca}} </td>
@@ -75,4 +75,21 @@
       <mat-icon>plus_one</mat-icon>
     </button>
   </div>
+
+  <!-- BOTONES DE CONSULTAS -->
+  <br>
+    <section>
+      <div class="example-label">Consultas</div>
+      <div class="example-button-row">
+        <a mat-raised-button href="vehiculo/estado" target="_blank">Estados de vehiculo</a>
+      </div>
+    </section>
+  <br>
+    <section>
+      <div class="example-button-row">
+        <a mat-raised-button href="vehiculo/cantidad" target="_blank">Cantidad de vehiculo</a>
+      </div>
+    </section>
+  <br>
+
 </div>

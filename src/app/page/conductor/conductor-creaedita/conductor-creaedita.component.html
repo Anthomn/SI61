@@ -21,12 +21,24 @@
     <mat-label>DNI</mat-label>
     <input matInput required placeholder="dni" [(ngModel)]="conductor.dni">
   </mat-form-field>
-
+  <!--
   <mat-form-field class="example-full-width">
     <mat-label>Genero</mat-label>
     <input matInput required placeholder="genero" [(ngModel)]="conductor.genero">
-  </mat-form-field>
- 
+  </mat-form-field>-->
+
+  <br> 
+
+  <mat-form-field appearance="fill" >
+      <mat-label>Seleccione Genero</mat-label>
+      <mat-select [(ngModel)]="conductor.genero" required>
+          <mat-option value="M">Mujer</mat-option>
+          <mat-option value="H">Hombre</mat-option>
+      </mat-select>
+  </mat-form-field>    
+
+  <br> 
+
   <mat-form-field class="example-full-width">
     <mat-label>Edad</mat-label>
     <input matInput placeholder="edad" [(ngModel)]="conductor.edad">
@@ -43,13 +55,23 @@
   </mat-form-field>
 
 
-
+<!--
   <mat-form-field class="example-full-width">
     <mat-label>Verificado</mat-label>
     <input matInput placeholder="Dirección" [(ngModel)]="conductor.verificado">
   </mat-form-field>
+-->
+  <br> 
 
-  <br>
+  <mat-form-field appearance="fill" >
+      <mat-label>Esta verificado? </mat-label>
+      <mat-select [(ngModel)]="conductor.verificado" required>
+          <mat-option value="S">Verificado</mat-option>
+          <mat-option value="N">No verificado</mat-option>
+      </mat-select>
+  </mat-form-field>    
+
+  <br> 
   
   <button mat-raised-button color="primary" (click)="aceptar()">Aceptar</button>
   <button mat-raised-button color="warn" routerLink="/conductor">Cancelar</button>

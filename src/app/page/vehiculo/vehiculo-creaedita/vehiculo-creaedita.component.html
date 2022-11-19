@@ -17,16 +17,49 @@
         <input matInput placeholder="Licencia" [(ngModel)]="vehiculo.aniomodelo">
     </mat-form-field>
     <br>
+    <!--
+    <br>
     <mat-form-field class="example-full-width">
         <mat-label>Color</mat-label>
         <input matInput placeholder="Licencia" [(ngModel)]="vehiculo.color">
     </mat-form-field>
+    -->
+    <br> 
+
+    <mat-form-field appearance="fill" >
+        <mat-label>Color del vehiculo </mat-label>
+        <mat-select [(ngModel)]="vehiculo.color" required>
+            <mat-option value="rojo">Rojo</mat-option>
+            <mat-option value="negro">Negro</mat-option>
+            <mat-option value="blanco">Blanco</mat-option>
+            <mat-option value="gris">Gris</mat-option>
+            <mat-option value="amarillo">Amarillo</mat-option>
+            <mat-option value="marron">Marron</mat-option>
+            <mat-option value="azul">Azul</mat-option>
+        </mat-select>
+    </mat-form-field>    
+  
     <br>
+    <!--
+    <br>
+
     <mat-form-field class="example-full-width">
         <mat-label>Estado</mat-label>
         <input matInput placeholder="Licencia" [(ngModel)]="vehiculo.estado">
     </mat-form-field>
     <br>
+    -->
+    <br> 
+
+    <mat-form-field appearance="fill" >
+        <mat-label>Estado del vehiculo </mat-label>
+        <mat-select [(ngModel)]="vehiculo.estado" required>
+            <mat-option value="nuevo">Nuevo</mat-option>
+            <mat-option value="viejo">Viejo</mat-option>
+        </mat-select>
+    </mat-form-field>    
+  
+    <br> 
     <mat-form-field class="example-full-width">
         <mat-label>Caracteristica</mat-label>
         <input matInput placeholder="Licencia" [(ngModel)]="vehiculo.caracteristica">
