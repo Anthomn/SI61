@@ -54,9 +54,9 @@ export class ViajesService {
   }
   buscarcantidadvehiculo(){
     return this.http.get<Respuesta[]>(`${this.url}/buscarcantidadviajes`);
-
+  }
   CantidadViajesXFecha(){
-    return this.http.get<CantidadViajesXFecha[]>(`${this.url}/cantidad`);
+    return this.http.get<CantidadViajesXFecha[]>(`${this.url}/cantidadvxf`);
 
   }
 }
