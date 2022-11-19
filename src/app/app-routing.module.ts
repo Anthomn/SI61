@@ -22,6 +22,10 @@ import { LandingComponent } from './page/landing/landing.component';
 import { SolicitudCreaeditaComponent } from './page/solicitud/solicitud-creaedita/solicitud-creaedita.component';
 import { MarcaComponent } from './page/marca/marca.component';
 import { MarcaCreaeditaComponent } from './page/marca/marca-creaedita/marca-creaedita.component';
+
+import { ConductorCantidadComponent } from './page/conductor/conductor-cantidad/conductor-cantidad.component';
+import { ViajesCantidadComponent } from './page/viajes/viajes-cantidad/viajes-cantidad.component';
+
 import { VehiculoEstadoComponent } from './page/vehiculo/vehiculo-estado/vehiculo-estado.component';
 import { VehiculoCantidadComponent } from './page/vehiculo/vehiculo-cantidad/vehiculo-cantidad.component';
 
@@ -32,12 +36,17 @@ import { SolicitudReporteComponent } from './page/solicitud/solicitud-reporte/so
 import { SolicitudReporteingresoComponent } from './page/solicitud/solicitud-reporteingreso/solicitud-reporteingreso.component';
 
 
+
 const routes: Routes = [
   {path: 'conductor', component:ConductorComponent},
   { path: 'conductor/nuevo', component: ConductorCreaeditaComponent },
   { path: 'conductor/edicion/:id', component: ConductorCreaeditaComponent } ,
+
+  {path: 'conductor/cantidad',component:ConductorCantidadComponent},
+
   {path:'conductor/reporteverificado', component:ConductorReporteverificadosComponent},
   {path:'conductor/reportetiempo',component:ConductorReportetiempoComponent},
+
 
   {path: 'padredefamilia', component: PadredefamiliaComponent},
   {path: 'padredefamilia/nuevo', component:  PadredefamiliaCreaeditaComponent},
@@ -65,7 +74,7 @@ const routes: Routes = [
 {path: 'viaje', component:ViajesComponent},
 { path: 'viaje/nuevo', component: ViajeCreaeditaComponent},
 { path: 'viaje/edicion/:id', component: ViajeCreaeditaComponent },
-
+{path: 'viaje/cantidad',component: ViajesCantidadComponent},
 
 {path: 'vehiculo', component:VehiculoComponent},
 { path: 'vehiculo/nuevo', component: VehiculoCreaeditaComponent},
