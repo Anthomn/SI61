@@ -22,11 +22,14 @@ import { LandingComponent } from './page/landing/landing.component';
 import { SolicitudCreaeditaComponent } from './page/solicitud/solicitud-creaedita/solicitud-creaedita.component';
 import { MarcaComponent } from './page/marca/marca.component';
 import { MarcaCreaeditaComponent } from './page/marca/marca-creaedita/marca-creaedita.component';
+import { ConductorCantidadComponent } from './page/conductor/conductor-cantidad/conductor-cantidad.component';
+import { ViajesCantidadComponent } from './page/viajes/viajes-cantidad/viajes-cantidad.component';
 
 const routes: Routes = [
   {path: 'conductor', component:ConductorComponent},
   { path: 'conductor/nuevo', component: ConductorCreaeditaComponent },
   { path: 'conductor/edicion/:id', component: ConductorCreaeditaComponent } ,
+  {path: 'conductor/cantidad',component:ConductorCantidadComponent},
 
   {path: 'padredefamilia', component: PadredefamiliaComponent},
   {path: 'padredefamilia/nuevo', component:  PadredefamiliaCreaeditaComponent},
@@ -52,7 +55,7 @@ const routes: Routes = [
 {path: 'viaje', component:ViajesComponent},
 { path: 'viaje/nuevo', component: ViajeCreaeditaComponent},
 { path: 'viaje/edicion/:id', component: ViajeCreaeditaComponent },
-
+{path: 'viaje/cantidad',component: ViajesCantidadComponent},
 
 {path: 'vehiculo', component:VehiculoComponent},
 { path: 'vehiculo/nuevo', component: VehiculoCreaeditaComponent},
