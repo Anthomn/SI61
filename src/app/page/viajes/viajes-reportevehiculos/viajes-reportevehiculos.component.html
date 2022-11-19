@@ -1,0 +1,22 @@
+<div class="container">
+    <h1> Cantidad de viajes por vehiculo </h1>
+    
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+    
+        <!-- Position Column -->
+        <ng-container matColumnDef="placa">
+            <th mat-header-cell *matHeaderCellDef> Placa de vehiculo </th>
+            <td mat-cell *matCellDef="let element"> {{element.vehiculo}} </td>
+        </ng-container>
+    
+        <!-- Name Column -->
+        <ng-container matColumnDef="cantidad">
+            <th mat-header-cell *matHeaderCellDef> Cantidad de viajes</th>
+            <td mat-cell *matCellDef="let element"> {{element.cantidadviajes}} </td>
+        </ng-container>
+    
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    
+    </table>
+</div>

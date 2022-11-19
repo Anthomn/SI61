@@ -1,3 +1,5 @@
+import { ViajesReportevehiculosComponent } from './page/viajes/viajes-reportevehiculos/viajes-reportevehiculos.component';
+import { ViajesReportefechaComponent } from './page/viajes/viajes-reportefecha/viajes-reportefecha.component';
 import { HistorialdeviajesCreaeditaComponent } from './page/historialdeviajes/historialdeviajes-creaedita/historialdeviajes-creaedita.component';
 
 import { ViajeCreaeditaComponent } from './page/viajes/viajes-creaedita/viajes-creaedita.component';
@@ -74,7 +76,13 @@ const routes: Routes = [
 {path: 'viaje', component:ViajesComponent},
 { path: 'viaje/nuevo', component: ViajeCreaeditaComponent},
 { path: 'viaje/edicion/:id', component: ViajeCreaeditaComponent },
+
+{ path: 'viaje/buscarfechamayor', component: ViajesReportefechaComponent },
+{ path: 'viaje/buscarvehiculo', component: ViajesReportevehiculosComponent },
+
+
 {path: 'viaje/cantidad',component: ViajesCantidadComponent},
+
 
 {path: 'vehiculo', component:VehiculoComponent},
 { path: 'vehiculo/nuevo', component: VehiculoCreaeditaComponent},
