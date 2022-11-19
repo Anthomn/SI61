@@ -22,14 +22,31 @@ import { LandingComponent } from './page/landing/landing.component';
 import { SolicitudCreaeditaComponent } from './page/solicitud/solicitud-creaedita/solicitud-creaedita.component';
 import { MarcaComponent } from './page/marca/marca.component';
 import { MarcaCreaeditaComponent } from './page/marca/marca-creaedita/marca-creaedita.component';
+
 import { ConductorCantidadComponent } from './page/conductor/conductor-cantidad/conductor-cantidad.component';
 import { ViajesCantidadComponent } from './page/viajes/viajes-cantidad/viajes-cantidad.component';
+
+import { VehiculoEstadoComponent } from './page/vehiculo/vehiculo-estado/vehiculo-estado.component';
+import { VehiculoCantidadComponent } from './page/vehiculo/vehiculo-cantidad/vehiculo-cantidad.component';
+
+import { ConductorReporteverificadosComponent } from './page/conductor/conductor-reporteverificados/conductor-reporteverificados.component';
+import { ConductorReportetiempoComponent } from './page/conductor/conductor-reportetiempo/conductor-reportetiempo.component';
+
+import { SolicitudReporteComponent } from './page/solicitud/solicitud-reporte/solicitud-reporte.component';
+import { SolicitudReporteingresoComponent } from './page/solicitud/solicitud-reporteingreso/solicitud-reporteingreso.component';
+
+
 
 const routes: Routes = [
   {path: 'conductor', component:ConductorComponent},
   { path: 'conductor/nuevo', component: ConductorCreaeditaComponent },
   { path: 'conductor/edicion/:id', component: ConductorCreaeditaComponent } ,
+
   {path: 'conductor/cantidad',component:ConductorCantidadComponent},
+
+  {path:'conductor/reporteverificado', component:ConductorReporteverificadosComponent},
+  {path:'conductor/reportetiempo',component:ConductorReportetiempoComponent},
+
 
   {path: 'padredefamilia', component: PadredefamiliaComponent},
   {path: 'padredefamilia/nuevo', component:  PadredefamiliaCreaeditaComponent},
@@ -48,9 +65,11 @@ const routes: Routes = [
 { path: 'ubicacion/nuevo', component: UbicacionCreaeditaComponent},
 { path: 'ubicacion/edicion/:id', component: UbicacionCreaeditaComponent },
 
-{path: 'solicitud', component:SolicitudComponent},
+{ path: 'solicitud', component:SolicitudComponent},
 { path: 'solicitud/nuevo', component: SolicitudCreaeditaComponent},
 { path: 'solicitud/edicion/:id', component: SolicitudCreaeditaComponent },
+{ path: 'solicitud/reportes', component: SolicitudReporteComponent},
+{ path: 'solicitud/reportesingreso', component: SolicitudReporteingresoComponent},
 
 {path: 'viaje', component:ViajesComponent},
 { path: 'viaje/nuevo', component: ViajeCreaeditaComponent},
@@ -60,6 +79,8 @@ const routes: Routes = [
 {path: 'vehiculo', component:VehiculoComponent},
 { path: 'vehiculo/nuevo', component: VehiculoCreaeditaComponent},
 { path: 'vehiculo/edicion/:id', component: VehiculoCreaeditaComponent },
+{path:'vehiculo/estado',component:VehiculoEstadoComponent},
+{path:'vehiculo/cantidad',component:VehiculoCantidadComponent},
 
 {path: 'marca', component:MarcaComponent},
 { path: 'marca/nuevo', component: MarcaCreaeditaComponent},

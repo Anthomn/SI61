@@ -69,8 +69,20 @@ import { MarcaDialogoComponent } from './page/marca/marca-listar/marca-dialogo/m
 import { MarcaBuscarComponent } from './page/marca/marca-buscar/marca-buscar.component';
 import { HistorialdeviajesBuscarComponent } from './page/historialdeviajes/historialdeviajes-buscar/historialdeviajes-buscar.component';
 import { VehiculoBuscarComponent } from './page/vehiculo/vehiculo-buscar/vehiculo-buscar.component';
+
 import { ConductorCantidadComponent } from './page/conductor/conductor-cantidad/conductor-cantidad.component';
 import { ViajesCantidadComponent } from './page/viajes/viajes-cantidad/viajes-cantidad.component';
+
+import { VehiculoEstadoComponent } from './page/vehiculo/vehiculo-estado/vehiculo-estado.component';
+import {VehiculoCantidadComponent } from './page/vehiculo/vehiculo-cantidad/vehiculo-cantidad.component';
+
+
+import { ConductorReporteverificadosComponent } from './page/conductor/conductor-reporteverificados/conductor-reporteverificados.component';
+import { ConductorReportetiempoComponent } from './page/conductor/conductor-reportetiempo/conductor-reportetiempo.component';
+
+import { SolicitudReporteComponent } from './page/solicitud/solicitud-reporte/solicitud-reporte.component';
+import { SolicitudReporteingresoComponent } from './page/solicitud/solicitud-reporteingreso/solicitud-reporteingreso.component';
+
 
 
 
@@ -124,8 +136,19 @@ import { ViajesCantidadComponent } from './page/viajes/viajes-cantidad/viajes-ca
     MarcaBuscarComponent,
     HistorialdeviajesBuscarComponent,
     VehiculoBuscarComponent,
+
     ConductorCantidadComponent,
-    ViajesCantidadComponent
+    ViajesCantidadComponent,
+
+    VehiculoEstadoComponent,
+    VehiculoCantidadComponent,
+    ConductorReporteverificadosComponent,
+    ConductorReportetiempoComponent,
+    SolicitudReporteComponent,
+    SolicitudReporteingresoComponent
+
+
+
 
   ],
   imports: [

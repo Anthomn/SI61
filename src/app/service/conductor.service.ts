@@ -52,4 +52,12 @@ constructor(private http:HttpClient) { }
     return this.http.get<CantidadVehiculoXConductor[]>(`${this.url}/cantidad`);
   }
 
+  reporteverificado(){
+    return this.http.get<Conductor[]>(`${this.url}/buscarverificado`);
+  }
+
+  reportetiempo(){
+    return this.http.get<Conductor[]>(`${this.url}/buscartiempo`)
+  }
+
 }

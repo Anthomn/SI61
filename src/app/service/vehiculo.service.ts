@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Vehiculo } from '../model/vehiculo';
 import { Subject } from 'rxjs';
+import { CantidadVehiculoRespuesta } from '../model/cantidadvehiculorespuesta';
 
 @Injectable({
   providedIn: 'root'
@@ -15,27 +16,32 @@ private url:string= "http://localhost:8080/vehiculo"
     return this.http.get<Vehiculo[]>(this.url);
   }
   insertar(vehiculo: Vehiculo) {
-  
+
     return this.http.post(this.url, vehiculo);
   }
 
   modificar(vehiculo: Vehiculo) {
-  
+
     return this.http.put(this.url, vehiculo);
   }
 
   eliminar(id: number) {
-  
+
     return this.http.delete(`${this.url}/${id}`);
   }
 
   buscar(texto: string) {
-  
+
     return this.http.post<Vehiculo[]>(`${this.url}/buscarplaca`, texto);
   }
-
+  estado(){
+    return this.http.get<Vehiculo[]>(`${this.url}/buscarestado`);
+  }
+  cantidad(){
+    return this.http.get<CantidadVehiculoRespuesta[]>(`${this.url}/cantidad`);
+  }
   listarId(id: number) {
-  
+
     return this.http.get<Vehiculo>(`${this.url}/${id}`);
   }
 

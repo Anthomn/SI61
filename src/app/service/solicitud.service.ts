@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Solicitud } from '../model/solicitud';
 import { Subject, EMPTY } from 'rxjs';
 import { environment } from 'src/environments/environment';
+import { RespuestaSolicitud } from '../model/respuestasolicitud';
 
 @Injectable({
   providedIn: 'root'
@@ -41,6 +42,17 @@ export class SolicitudService {
   
       return this.http.get<Solicitud>(`${this.url}/${id}`);
     }
+
+    buscarSolicitudConductor(){
+      return this.http.get<RespuestaSolicitud[]>(`${this.url}/reportesolicitud`);
+    }
+
+    buscarSolicitud(){
+      return this.http.get<RespuestaSolicitud[]>(`${this.url}/reporteingresos`);
+    }
+
+
+
     getLista() {
       return this.listaCambio.asObservable();
     }

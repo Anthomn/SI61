@@ -1,0 +1,31 @@
+<div class="container">
+    <div style="text-align: center;">
+      <h1> LISTA DE INGRESOS MENSUAL POR CONDUCTOR</h1>
+    </div>
+  
+  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+ 
+      <!-- Position Column -->
+      <ng-container matColumnDef="idconductor">
+        <th mat-header-cell *matHeaderCellDef> Id </th>
+        <td mat-cell *matCellDef="let element"> {{element?.id}} </td>
+      </ng-container>
+    
+      <!-- Name Column -->
+      <ng-container matColumnDef="conductor">
+        <th mat-header-cell *matHeaderCellDef> Nombre </th>
+        <td mat-cell *matCellDef="let element"> {{element?.conductor}} </td>
+      </ng-container>
+      <ng-container matColumnDef="cantidad">
+        <th mat-header-cell *matHeaderCellDef> Cantidad </th>
+        <td mat-cell *matCellDef="let element"> {{element?.cantidad}} </td>
+      </ng-container>
+  
+      <ng-container matColumnDef="monto">
+        <th mat-header-cell *matHeaderCellDef> Monto </th>
+        <td mat-cell *matCellDef="let element"> {{element?.ingresoMensual}} </td>
+      </ng-container> 
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+  </div>
