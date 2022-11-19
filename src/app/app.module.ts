@@ -73,6 +73,13 @@ import { VehiculoEstadoComponent } from './page/vehiculo/vehiculo-estado/vehicul
 import {VehiculoCantidadComponent } from './page/vehiculo/vehiculo-cantidad/vehiculo-cantidad.component';
 
 
+import { ConductorReporteverificadosComponent } from './page/conductor/conductor-reporteverificados/conductor-reporteverificados.component';
+import { ConductorReportetiempoComponent } from './page/conductor/conductor-reportetiempo/conductor-reportetiempo.component';
+
+import { SolicitudReporteComponent } from './page/solicitud/solicitud-reporte/solicitud-reporte.component';
+import { SolicitudReporteingresoComponent } from './page/solicitud/solicitud-reporteingreso/solicitud-reporteingreso.component';
+
+
 
 
 
@@ -126,7 +133,13 @@ import {VehiculoCantidadComponent } from './page/vehiculo/vehiculo-cantidad/vehi
     HistorialdeviajesBuscarComponent,
     VehiculoBuscarComponent,
     VehiculoEstadoComponent,
-    VehiculoCantidadComponent
+    VehiculoCantidadComponent,
+    ConductorReporteverificadosComponent,
+    ConductorReportetiempoComponent
+    SolicitudReporteComponent,
+    SolicitudReporteingresoComponent
+
+
 
   ],
   imports: [
