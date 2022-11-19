@@ -22,6 +22,8 @@ import { LandingComponent } from './page/landing/landing.component';
 import { SolicitudCreaeditaComponent } from './page/solicitud/solicitud-creaedita/solicitud-creaedita.component';
 import { MarcaComponent } from './page/marca/marca.component';
 import { MarcaCreaeditaComponent } from './page/marca/marca-creaedita/marca-creaedita.component';
+import { VehiculoEstadoComponent } from './page/vehiculo/vehiculo-estado/vehiculo-estado.component';
+import { VehiculoCantidadComponent } from './page/vehiculo/vehiculo-cantidad/vehiculo-cantidad.component';
 
 import { ConductorReporteverificadosComponent } from './page/conductor/conductor-reporteverificados/conductor-reporteverificados.component';
 import { ConductorReportetiempoComponent } from './page/conductor/conductor-reportetiempo/conductor-reportetiempo.component';
@@ -68,6 +70,8 @@ const routes: Routes = [
 {path: 'vehiculo', component:VehiculoComponent},
 { path: 'vehiculo/nuevo', component: VehiculoCreaeditaComponent},
 { path: 'vehiculo/edicion/:id', component: VehiculoCreaeditaComponent },
+{path:'vehiculo/estado',component:VehiculoEstadoComponent},
+{path:'vehiculo/cantidad',component:VehiculoCantidadComponent},
 
 {path: 'marca', component:MarcaComponent},
 { path: 'marca/nuevo', component: MarcaCreaeditaComponent},
