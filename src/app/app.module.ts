@@ -69,8 +69,13 @@ import { MarcaDialogoComponent } from './page/marca/marca-listar/marca-dialogo/m
 import { MarcaBuscarComponent } from './page/marca/marca-buscar/marca-buscar.component';
 import { HistorialdeviajesBuscarComponent } from './page/historialdeviajes/historialdeviajes-buscar/historialdeviajes-buscar.component';
 import { VehiculoBuscarComponent } from './page/vehiculo/vehiculo-buscar/vehiculo-buscar.component';
+
+import { ConductorReporteverificadosComponent } from './page/conductor/conductor-reporteverificados/conductor-reporteverificados.component';
+import { ConductorReportetiempoComponent } from './page/conductor/conductor-reportetiempo/conductor-reportetiempo.component';
+
 import { SolicitudReporteComponent } from './page/solicitud/solicitud-reporte/solicitud-reporte.component';
 import { SolicitudReporteingresoComponent } from './page/solicitud/solicitud-reporteingreso/solicitud-reporteingreso.component';
+
 
 
 
@@ -124,8 +129,11 @@ import { SolicitudReporteingresoComponent } from './page/solicitud/solicitud-rep
     MarcaBuscarComponent,
     HistorialdeviajesBuscarComponent,
     VehiculoBuscarComponent,
+    ConductorReporteverificadosComponent,
+    ConductorReportetiempoComponent
     SolicitudReporteComponent,
     SolicitudReporteingresoComponent
+
 
   ],
   imports: [

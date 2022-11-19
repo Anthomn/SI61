@@ -22,13 +22,20 @@ import { LandingComponent } from './page/landing/landing.component';
 import { SolicitudCreaeditaComponent } from './page/solicitud/solicitud-creaedita/solicitud-creaedita.component';
 import { MarcaComponent } from './page/marca/marca.component';
 import { MarcaCreaeditaComponent } from './page/marca/marca-creaedita/marca-creaedita.component';
+
+import { ConductorReporteverificadosComponent } from './page/conductor/conductor-reporteverificados/conductor-reporteverificados.component';
+import { ConductorReportetiempoComponent } from './page/conductor/conductor-reportetiempo/conductor-reportetiempo.component';
+
 import { SolicitudReporteComponent } from './page/solicitud/solicitud-reporte/solicitud-reporte.component';
 import { SolicitudReporteingresoComponent } from './page/solicitud/solicitud-reporteingreso/solicitud-reporteingreso.component';
+
 
 const routes: Routes = [
   {path: 'conductor', component:ConductorComponent},
   { path: 'conductor/nuevo', component: ConductorCreaeditaComponent },
   { path: 'conductor/edicion/:id', component: ConductorCreaeditaComponent } ,
+  {path:'conductor/reporteverificado', component:ConductorReporteverificadosComponent},
+  {path:'conductor/reportetiempo',component:ConductorReportetiempoComponent},
 
   {path: 'padredefamilia', component: PadredefamiliaComponent},
   {path: 'padredefamilia/nuevo', component:  PadredefamiliaCreaeditaComponent},
