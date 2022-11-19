@@ -3,7 +3,7 @@ import { environment } from 'src/environments/environment';
 import {HttpClient} from '@angular/common/http';
 import { Conductor } from '../model/conductor';
 import { Subject, EMPTY } from 'rxjs';
-
+import {CantidadVehiculoXConductor} from '../model/cantidadvehiculoconductor';
 @Injectable({
   providedIn: 'root'
 })
@@ -47,6 +47,17 @@ constructor(private http:HttpClient) { }
       return this.http.post<Conductor[]>(`${this.url}/buscarnombre`, texto.toLowerCase()/*,{}*/);
     }
     return EMPTY;
+  }
+  CantidadVehiculosXConductor(){
+    return this.http.get<CantidadVehiculoXConductor[]>(`${this.url}/cantidad`);
+  }
+
+  reporteverificado(){
+    return this.http.get<Conductor[]>(`${this.url}/buscarverificado`);
+  }
+
+  reportetiempo(){
+    return this.http.get<Conductor[]>(`${this.url}/buscartiempo`)
   }
 
 }

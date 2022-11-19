@@ -72,6 +72,20 @@ import { VehiculoBuscarComponent } from './page/vehiculo/vehiculo-buscar/vehicul
 import { ViajesReportefechaComponent } from './page/viajes/viajes-reportefecha/viajes-reportefecha.component';
 import { ViajesReportevehiculosComponent } from './page/viajes/viajes-reportevehiculos/viajes-reportevehiculos.component';
 
+import { ConductorCantidadComponent } from './page/conductor/conductor-cantidad/conductor-cantidad.component';
+import { ViajesCantidadComponent } from './page/viajes/viajes-cantidad/viajes-cantidad.component';
+
+import { VehiculoEstadoComponent } from './page/vehiculo/vehiculo-estado/vehiculo-estado.component';
+import {VehiculoCantidadComponent } from './page/vehiculo/vehiculo-cantidad/vehiculo-cantidad.component';
+
+
+import { ConductorReporteverificadosComponent } from './page/conductor/conductor-reporteverificados/conductor-reporteverificados.component';
+import { ConductorReportetiempoComponent } from './page/conductor/conductor-reportetiempo/conductor-reportetiempo.component';
+
+import { SolicitudReporteComponent } from './page/solicitud/solicitud-reporte/solicitud-reporte.component';
+import { SolicitudReporteingresoComponent } from './page/solicitud/solicitud-reporteingreso/solicitud-reporteingreso.component';
+
+
 
 
 
@@ -124,8 +138,23 @@ import { ViajesReportevehiculosComponent } from './page/viajes/viajes-reporteveh
     MarcaBuscarComponent,
     HistorialdeviajesBuscarComponent,
     VehiculoBuscarComponent,
+
     ViajesReportefechaComponent,
     ViajesReportevehiculosComponent
+
+    ConductorCantidadComponent,
+    ViajesCantidadComponent,
+
+    VehiculoEstadoComponent,
+    VehiculoCantidadComponent,
+    ConductorReporteverificadosComponent,
+    ConductorReportetiempoComponent,
+    SolicitudReporteComponent,
+    SolicitudReporteingresoComponent
+
+
+
+
 
   ],
   imports: [

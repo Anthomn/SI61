@@ -4,6 +4,7 @@ import { HttpClient } from '@angular/common/http';
 import { Viajes } from '../model/viajes';
 import { environment } from 'src/environments/environment';
 import { Subject, EMPTY } from 'rxjs';
+import { CantidadViajesXFecha } from '../model/cantidadviajesfecha';
 @Injectable({
   providedIn: 'root'
 })
@@ -47,10 +48,15 @@ export class ViajesService {
     }
     return EMPTY;
   }
+
   reporte(){
     return this.http.get<Viajes[]>(`${this.url}/buscarfechamayor`);
   }
   buscarcantidadvehiculo(){
     return this.http.get<Respuesta[]>(`${this.url}/buscarcantidadviajes`);
+
+  CantidadViajesXFecha(){
+    return this.http.get<CantidadViajesXFecha[]>(`${this.url}/cantidad`);
+
   }
 }

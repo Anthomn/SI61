@@ -1,8 +1,8 @@
 <div class="container">
   <div style="text-align: center;">
-    <h1> LISTA DE VEHICULOS</h1>
+    <h1> LISTA DE VEHICULOS NUEVOS</h1>
   </div>
-  <app-vehiculo-buscar></app-vehiculo-buscar>
+
   <!--<mat-form-field>
     <input matInput (keyup)="filtrar($event)" placeholder="Buscar">
   </mat-form-field>-->
@@ -12,17 +12,17 @@
     <!--- Note that these columns can be defined in any order.
           The actual rendered columns are set as a property on the row definition" -->
 
-    <!-- Position Column -->
-    <ng-container matColumnDef="idvehiculo">
-        <th mat-header-cell *matHeaderCellDef> idvehiculo </th>
-        <td mat-cell *matCellDef="let element"> {{element?.id}} </td>
-      </ng-container>
+          <ng-container matColumnDef="idvehiculo">
+            <th mat-header-cell *matHeaderCellDef> idvehiculo </th>
+            <td mat-cell *matCellDef="let element"> {{element?.id}} </td>
+          </ng-container>
+
 
       <ng-container matColumnDef="aniomodelo">
         <th mat-header-cell *matHeaderCellDef> aniomodelo </th>
         <td mat-cell *matCellDef="let element"> {{element?.aniomodelo}} </td>
       </ng-container>
-      <!-- Symbol Column -->
+
       <ng-container matColumnDef="placa">
         <th mat-header-cell *matHeaderCellDef> placa </th>
         <td mat-cell *matCellDef="let element"> {{element?.placa}} </td>
@@ -42,7 +42,7 @@
         <th mat-header-cell *matHeaderCellDef> idmarca </th>
         <td mat-cell *matCellDef="let element"> {{element?.marca.nombremarca}} </td>
       </ng-container>
-      <!-- Symbol Column -->
+
       <ng-container matColumnDef="caracteristica">
         <th mat-header-cell *matHeaderCellDef> caracteristica </th>
         <td mat-cell *matCellDef="let element"> {{element?.caracteristica}} </td>
@@ -53,26 +53,9 @@
         <td mat-cell *matCellDef="let element"> {{element?.conductor.nombre}} </td>
       </ng-container>
 
-      <ng-container matColumnDef="acciones">
-        <th mat-header-cell *matHeaderCellDef> Acciones </th>
-        <td mat-cell *matCellDef="let element">
-          <button mat-mini-fab color="white"
-            [routerLink]="['edicion', element.id]">
-              <mat-icon>edit</mat-icon>
-          </button>
-          <button mat-mini-fab color="white"  (click)="confirmar(element.id)">
-            <mat-icon>delete</mat-icon>
-          </button>
-        </td>
-      </ng-container>
 
       <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
       <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
   </table>
-  <div class="example-button-container">
-    <button mat-mini-fab color="primary" aria-label="Example icon button with a plus one icon"
-      routerLink="/vehiculo/nuevo">
-      <mat-icon>plus_one</mat-icon>
-    </button>
-  </div>
 </div>
+
