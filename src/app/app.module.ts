@@ -130,7 +130,7 @@ import { SolicitudReporteingresoComponent } from './page/solicitud/solicitud-rep
     HistorialdeviajesBuscarComponent,
     VehiculoBuscarComponent,
     ConductorReporteverificadosComponent,
-    ConductorReportetiempoComponent
+    ConductorReportetiempoComponent,
     SolicitudReporteComponent,
     SolicitudReporteingresoComponent
 
