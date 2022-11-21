@@ -7,7 +7,7 @@ import { Subject, EMPTY } from 'rxjs';
 })
 export class UbicacionService {
 
-  private url:string= "http://localhost:8080/ubicacion"
+  private url:string= "http://backend-safeport-postgress.herokuapp.com/ubicacion"
   private listaCambio = new Subject<Ubicacion[]>()
   private confirmaEliminacion = new Subject<Boolean>()
   constructor(private http:HttpClient) { }

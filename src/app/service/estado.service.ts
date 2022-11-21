@@ -9,7 +9,7 @@ import { Subject, EMPTY } from 'rxjs';
 })
 export class EstadoService {
 
-  private url: string = "http://localhost:8080/estado"
+  private url: string = "http://backend-safeport-postgress.herokuapp.com/estado"
   private listaCambio = new Subject<Estado[]>()
   private confirmaEliminacion = new Subject<Boolean>()
   constructor(private http:HttpClient) { }

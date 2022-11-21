@@ -7,7 +7,7 @@ import { Subject, EMPTY } from 'rxjs';
   providedIn: 'root'
 })
 export class MarcaService {
-  url:string= "http://localhost:8080/marca"
+  url:string= "http://backend-safeport-postgress.herokuapp.com/marca"
   private listaCambio = new Subject<Marca[]>()
   private confirmaEliminacion = new Subject<Boolean>()
   constructor(private http:HttpClient) { }
