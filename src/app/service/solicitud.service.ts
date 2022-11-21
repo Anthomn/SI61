@@ -9,7 +9,7 @@ import { RespuestaSolicitud } from '../model/respuestasolicitud';
   providedIn: 'root'
 })
 export class SolicitudService {
-    private url: string =  "http://backend-safeport-postgress.herokuapp.com/solicitud"
+    private url: string =  "https://backend-safeport-postgress.herokuapp.com/solicitud"
     private listaCambio = new Subject<Solicitud[]>()
     private confirmaEliminacion = new Subject<Boolean>()
     constructor(private http: HttpClient) { }

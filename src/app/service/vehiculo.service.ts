@@ -8,7 +8,7 @@ import { CantidadVehiculoRespuesta } from '../model/cantidadvehiculorespuesta';
   providedIn: 'root'
 })
 export class VehiculoService {
-private url:string= "http://backend-safeport-postgress.herokuapp.com/vehiculo"
+private url:string= "https://backend-safeport-postgress.herokuapp.com/vehiculo"
   private listaCambio = new Subject<Vehiculo[]>()
   private confirmaEliminacion = new Subject<Boolean>()
   constructor(private http:HttpClient) { }

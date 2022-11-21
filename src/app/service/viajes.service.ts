@@ -9,7 +9,7 @@ import { CantidadViajesXFecha } from '../model/cantidadviajesfecha';
   providedIn: 'root'
 })
 export class ViajesService {
-  private url:string= "http://backend-safeport-postgress.herokuapp.com/viajes"
+  private url: string =  "https://backend-safeport-postgress.herokuapp.com/viajes"
   private listaCambio = new Subject<Viajes[]>()
   private confirmaEliminacion = new Subject<Boolean>()
   constructor(private http:HttpClient) { }

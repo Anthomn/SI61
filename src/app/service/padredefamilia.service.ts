@@ -7,7 +7,7 @@ import { Subject, EMPTY } from 'rxjs';
   providedIn: 'root'
 })
 export class PadredefamiliaService {
-  private url:string= "http://backend-safeport-postgress.herokuapp.com/padredefamilia"
+  url:string= "https://backend-safeport-postgress.herokuapp.com/padredefamilia"
   private listaCambio = new Subject<Padredefamilia[]>()
   private confirmaEliminacion = new Subject<Boolean>()
   constructor(private http:HttpClient) { }

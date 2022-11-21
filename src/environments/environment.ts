@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  host:"http://backend-safeport-postgress.herokuapp.com"
+  host:"https://backend-safeport-postgress.herokuapp.com"
 
 };
 

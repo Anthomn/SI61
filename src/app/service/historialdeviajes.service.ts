@@ -7,7 +7,7 @@ import { Subject, EMPTY } from 'rxjs';
 })
 export class HistorialdeviajesService {
 
-  private url:string= "http://backend-safeport-postgress.herokuapp.com/historialviaje"
+  private url:string= "https://backend-safeport-postgress.herokuapp.com/historialviaje"
   private listaCambio = new Subject<Historialdeviajes[]>()
   private confirmaEliminacion = new Subject<Boolean>()
 

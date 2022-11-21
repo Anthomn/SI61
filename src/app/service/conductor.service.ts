@@ -8,7 +8,7 @@ import {CantidadVehiculoXConductor} from '../model/cantidadvehiculoconductor';
   providedIn: 'root'
 })
 export class ConductorService {
-url:string= "http://backend-safeport-postgress.herokuapp.com/conductor"
+url:string= "https://backend-safeport-postgress.herokuapp.com/conductor"
 private listaCambio = new Subject<Conductor[]>()
 private confirmaEliminacion = new Subject<Boolean>()
 constructor(private http:HttpClient) { }
